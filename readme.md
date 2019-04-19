@@ -3,7 +3,7 @@ terus dikasih ke folder ./application/views
 
 Diisi sesuai tugasnya masing2 yaa
 
-Cara pake:
-	1. Clone dulu
-	2. Bikin file buat model, controller sama view nya
-	3. Copy file2 itu ke folder model,controller,view di repositori ini
+Cara pake: <br/>
+	1. Clone dulu <br/>
+	2. Bikin file buat model, controller sama view nya <br/>
+	3. Copy file2 itu ke folder model,controller,view di repositori ini <br/>
