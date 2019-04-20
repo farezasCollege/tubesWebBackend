@@ -65,7 +65,7 @@
 						<a class="nav-link" href="#about">About</a> 
 					</li>
 					<li class="nav-item" style="cursor: pointer;">
-						<a href="<?php echo base_url('index.php/Web/booking/'); ?>" class="nav-link" id="signup-butt">Signup</a>
+						<a href="<?php echo base_url('index.php/Web/Register/'); ?>" class="nav-link" id="signup-butt">Signup</a>
 					</li>
 					<li class="nav-item" style="cursor: pointer;">
 						<a href="#login" class="nav-link" data-toggle="modal" data-target="#login-form" id="login-butt">Login</a>

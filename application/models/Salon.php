@@ -9,18 +9,20 @@ class Salon extends CI_Model {
 	    $data = [
 			"Nama" => $this->input->post('nama', true),
 			"Date" => $this->input->post('date', true),
-			"email" => $this->input->post('email', true),
+			"Email" => $this->input->post('email', true),
 			"Username" => $this->input->post('username', true),
-			"pass" => $this->input->post('pass', true),
+			"Password" => $this->input->post('pass', true),
+			"Role" => $this->input->post('role', true),
 		];
 		$arrData = array(
 			'Nama' => $_POST['nama'],
 			'Date' => $_POST['date'],
-			'email' => $_POST['email'],
+			'Email' => $_POST['email'],
 			'Username' => $_POST['Username'],
-			'pass' => $_POST['pass']
+			'Password' => $_POST['pass'],
+      'Role' => 'customer'
 	    );
-	$this->db->insert('tb_user',$arrData);
+	$this->db->insert('user',$arrData);
 	}
 
 	public function Getuser()
