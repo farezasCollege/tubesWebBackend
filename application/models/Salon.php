@@ -56,48 +56,4 @@ class Salon extends CI_Model {
 		);
 $this->db->insert('booking',$arrData);
 }
-
-
-	public function hapus_mahasiswa($nim)
-	{
-		 $this->db->delete('mahasiswa', array('nim' => $nim));
-	}
-
-	//FUNCTION TO DELETE EDIT
-	public function edit_mahasiswa($nim,$data)
-	{
-		
-	}
-
-	//FUNCTION TO ADD MAHASISWA
-	public function tambah_mahasiswa($data)
-	{
-		$this->db->insert('mahasiswa',$data);
-		return;
-	}
-
-
-	//FUNCTION TO DELETE MAJORS
-
-	public function hapus_jurusan($id_jurusan)
-	{
-		
-	}
-
-
-	//FUNCTION TO EDIT MAJORS
-	public function edit_jurusan($id_jurusan,$data)
-	{
-		
-	}
-
-
-	//FUNCTION TO ADD MAJORS
-	public function tambah_jurusan($data)
-	{
-		
-	}
-
-
-
 }

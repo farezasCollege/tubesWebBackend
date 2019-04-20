@@ -14,8 +14,6 @@ class Web extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('fareza');
-
-
 	}
     public function booking()
 	{
@@ -63,105 +61,6 @@ class Web extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('footer');
 		}
-
-	}
-	public function RegisterPeg()
-	{
-		$this->load->view('RegisterPeg');
-	}
-
-	public function mahasiswa()
-	{
-		$data_mahasiswa = $this->M_web->Getmahasiswa_nim();
-		$data_jurusan = $this->M_web->Getjurusan_nim();
-		$this->load->view('page_header',['dataJ'=>$data_jurusan]);
-		$this->load->view('page_mahasiswa',['data'=>$data_mahasiswa]);
-	}
-
-	public function jurusan()
-	{
-		$data_jurusan = $this->M_web->Getjurusan_nim();
-		$this->load->view('page_header');
-		$this->load->view('page_jurusan',['data'=>$data_jurusan]);
-	}
-
-
-	#lengkapi FUNCTION BERIKUT
-	public function hapusmahasiswa($nim)
-	{
-
-		//Load function hapus_mahasiswa from M_web
-		// make it to index.php/web/mahasiswa after delete complete
-		$this->M_web->hapus_mahasiswa($nim);
-		// $data['data'] = $this->M_web->hapus_mahasiswa($nim);
-		Redirect('index.php/Web/mahasiswa');
-
-	}
-
-
-	public function tambahmahasiswa()
-	{
-		
-		// Create variabel and use it for input data to database.
-		// Load tambah_mahasiswa($data) from M_web
-		// Redirect to index.php/web/mahasiswa after add data.
-		$data = [
-			"nim" => $this->input->post('nim'),
-			"nama" => $this->input->post('nama'),
-			"kelas" => $this->input->post('kelas'),
-			"id_jurusan" => $this->input->post('jurusan'),
-		];
-
-	$this->M_web->tambah_mahasiswa($data);
-	Redirect('index.php/Web/mahasiswa');
-
-	}
-
-	public function editmahasiswa()
-	{
-
-		// Create variabel and use it for edit data from database.
-		// Load edit_mahasiswa($nim,$data) from M_web
-		// Redirect to index.php/web/mahasiswa after edit data.
-		
-
-
-	}
-
-
-	#lengkapi FUNCTION BERIKUT UNTUK PAGE JURUSAN
-
-
-
-	public function tambahjurusan()
-	{
-
-		// Create variabel and use it for add data from database.
-		// Load tambah_jurusan($data) from M_web
-		// Redirect to index.php/web/jurusan after add data.
-
-
-	
-
-	}
-
-	public function editjurusan()
-	{
-
-		// Create variabel and use it for add data from database.
-		// Load edit_jurusan($id_jurusan,$data) from M_web
-		// Redirect to index.php/web/jurusan after add data.
-
-
-	
-	}
-
-	public function hapusjurusan($id_jurusan)
-	{
-
-		// Create variabel and use it for add data from database.
-		// Load hapus_jurusan($id_jurusan) from M_web
-		// Redirect to index.php/web/jurusan after add data.
 
 	}
 }

@@ -53,10 +53,10 @@ class homepage extends CI_Controller
 
 			//redirect(site_url('redirect_homepage')); ini masih ragu
 			if ($q[0]['role']=='customer') {
-				//$this->load->view(''); //redirect ke dashboard customer
+				//redirect(base_url('')); //redirect ke dashboard customer
 				echo "kontol";
 			}else{
-				$this->load->view('inputkodebooking'); //redirect ke homepage pegawai
+				//redirect(base_url(''));  redirect ke homepage pegawai
 			}
 
 		}else{
