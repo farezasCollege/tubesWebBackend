@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
     
     <title>Booking Page</title>
 
     <!-- Main css -->
-    <link rel="stylesheet" href="./css/booking.css">
-</head>
+    <link rel="stylesheet" href="<?php echo base_url ('assets/css/booking.css')?>">
+    
+</head> 
 <body style="background-color: #b7ecec">
 
-    <nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top">
-        <a class="navbar-brand" href="#">
-            <!-- navbar branding -->
-            <img src="./assets/branding.png" style="">
-        </a>                
+    <nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
+                    <a class="navbar-brand" href="#">
+                        <!-- navbar branding -->
+                        <img src="<?php echo base_url ('assets/img/branding.png')?>">
+                    </a>                
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>"> Home </a> 
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#service">Service</a> 
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a> 
-            </li>
-            <li class="nav-item" style="cursor: pointer;">
-                <a href="#signup" class="nav-link" id="signup-butt">Signup</a>
-            </li>
-        </ul>
-    </nav>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a href="<?php echo base_url ('index.php/Web/fareza')?>" class="nav-link" id="signup-butt">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service">Service</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a> 
+                        </li>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
+                        </li>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a href="<?php echo base_url ('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
+                        </li>
+                    </ul>
+                    
+                </nav>
 
     <div class="main">
 
@@ -43,7 +50,9 @@
             <div class="booking-content">
                 <div class="booking-image">
                     <div class="row">
-                        <img src="./assets/hair.jpg" style="width: 100%; height: 850px">
+
+                        <img src="<?php echo base_url ('assets/img/hair.jpg')?>" style="width: 100%; height: 850px">
+
                         <!-- <div class="column">
                             <img src="creambath.jpg" style="width:100%">
                             <img src="creambath.jpg" style="width:100%">
@@ -68,12 +77,13 @@
 
                     </div>
                 </div>
+                <form action="" method="POST" id="booking-form">
                 <div class="booking-form">
-                    <form id="booking-form">
+                   
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
                         <div class="form-group form-input">
-                            <input type="text" name="name" id="name" value="" required/>
+                            <input type="text" name="nama" id="name" value="" required/>
                             <label for="name" class="form-label">Full Name</label>
                         </div>
                         <div class="form-group form-input">
@@ -87,7 +97,7 @@
                         <br>
                         <div class="form-group">
                             <div class="select-list">
-                                <select name="text" id="Gender" required>
+                                <select name="gender" id="Gender" required>
                                     <option value="">Gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
@@ -118,7 +128,7 @@
                             </div>
                             <br>
                             <div class="select-list">
-                                <select name="text" id="service" required>
+                                <select name="service" id="service" required>
                                     <option value="1">Nail Art</option>
                                     <option value="2">Creambath</option>
                                     <option value="3">Smooting</option>
