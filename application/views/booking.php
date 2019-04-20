@@ -77,8 +77,9 @@
 
                     </div>
                 </div>
-                <form action="" method="POST" id="booking-form">
                 <div class="booking-form">
+                <form action="" method="POST" id="booking-form">
+                
                    
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
