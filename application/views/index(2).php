@@ -105,9 +105,9 @@
 	<div class="modal fade" id="login-form" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
-			<div class="modal-content" style="border-radius: 14px !important;">
+			<div class="modal-content" style="border-radius: 25px !important;">
 				<div class="container-login">
-					<h3 >LOGIN</h3>
+					<h3>LOGIN</h3>
 					<form action="<?php echo base_url('index.php/homepage/login_action/');?>" method="POST">
 						<div class="form-group">
 
@@ -117,8 +117,8 @@
 							<label>password</label>						
 							<input id="pass" class="input-pass" placeholder="password" name="pass-input" type="password" required>
 
-							<button type="submit" class="btn btn-primary">Login</button>
-							<a href="#forgot">Forgot Password?</a>
+							<button type="submit" class="btn btn-primary tombollogin">Login</button>
+							<a class="forgotpass"  href="#forgot">Forgot Password?</a>
 						</div>
 					</form>
 				</div>
