@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Apr 2019 pada 11.32
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.0.28
+-- Generation Time: Apr 20, 2019 at 01:28 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_jasa`
+-- Table structure for table `jenis_jasa`
 --
 
 CREATE TABLE `jenis_jasa` (
@@ -37,7 +37,7 @@ CREATE TABLE `jenis_jasa` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pemesanan`
+-- Table structure for table `pemesanan`
 --
 
 CREATE TABLE `pemesanan` (
@@ -52,39 +52,47 @@ CREATE TABLE `pemesanan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
-  `username` varchar(25) NOT NULL,
-  `password` varchar(40) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `nama` varchar(30) NOT NULL,
-  `tgl_lahir` date NOT NULL,
-  `role` varchar(8) NOT NULL
+  `Nama` varchar(20) NOT NULL,
+  `Date` varchar(10) NOT NULL,
+  `Email` varchar(20) NOT NULL,
+  `Username` varchar(10) NOT NULL,
+  `Password` varchar(10) NOT NULL,
+  `Role` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`Nama`, `Date`, `Email`, `Username`, `Password`, `Role`) VALUES
+('nisa', '123', 'nisarahma128@yahoo.c', 'RTR', '13124141', 'Customer'),
+('captainAmerika', '123', 'nisarahma128@yahoo.c', 'saaa', '23534635', 'customer');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `jenis_jasa`
+-- Indexes for table `jenis_jasa`
 --
 ALTER TABLE `jenis_jasa`
   ADD PRIMARY KEY (`id_layanan`);
 
 --
--- Indeks untuk tabel `pemesanan`
+-- Indexes for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`kode_booking`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`Username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
