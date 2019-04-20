@@ -25,12 +25,24 @@ class Salon extends CI_Model {
 	$this->db->insert('user',$arrData);
 	}
 
-	public function Getuser()
+	public function GetCustumerUser($Username)
 	{
-		$this->db->select('*');
-		$this->db->from('jurusan');
-		$query = $this->db->get();
-		return $query->result();
+		$this->db->where('Username', $Username);
+		return $this->db->get('user')->row_array();
+	}
+
+	public function UbahDataCustomer()
+	{
+		$data = array (
+			'Nama' => $this->input->post('nama', true),
+			'Date' => $this->input->post('date', true),
+			'Email' => $this->input->post('email', true),
+			'Password' => $this->input->post('pass', true),
+			'Role' => 'customer',
+		);
+		//use query builder class to update data mahasiswa based on id
+		$this->db->where('Username',$Username);
+		$this->db->update('user',$data);
 	}
 
 	public function Getbooking(){

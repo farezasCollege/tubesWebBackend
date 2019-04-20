@@ -65,7 +65,7 @@
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
                             <div class="form-group"> 
-                                <input type="text" name="date" id="name" placeholder="Date Of Birth" required/>
+                                <input type="Date" name="date" id="name" placeholder="Date Of Birth" required/>
                             </div>
                             <div class="form-group">
                                 <input type="email" name="email" id="email" placeholder="Your Email" required/>
@@ -84,8 +84,8 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
-                        <a href="<?php echo base_url('index.php/Web'); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>
-                        <a href="<?php echo site_url('Landing/thankyou'); ?>" class="signup-image-link">liat thankyou</a>
+                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
+    
 
                     </div>
                 </div>
