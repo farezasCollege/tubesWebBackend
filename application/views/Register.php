@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>welcome page</title>
+	<title>REGISTER</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/welcome.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/section2.css">
@@ -36,7 +36,7 @@
 							<a class="nav-link" href="<?php echo base_url();?>">Home</a> 
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#service">Service</a> 
+							<a class="nav-link" href="<?php echo base_url();?>">Service</a> 
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#about">About</a> 
@@ -57,33 +57,27 @@
      <section class="signup">
             <div class="container">
                 <div class="signup-content"> 
-                    <div class="signup-form">
+                    <div class="signup-form" style="margin-top:60px">
                         <h2 class="form-title" align="center">Sign up</h2>
 
                         <form action="" method="POST" class="register-form" id="register-form">
                         <div class="form-group">
-                                
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
                             <div class="form-group"> 
-                                <label for="date"><i class="zmdi zmdi-calendar-alt" id='datetimepicker1'></i></label>
                                 <input type="text" name="date" id="name" placeholder="Date Of Birth" required/>
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email" required/>
                             </div>
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="Username" id="name" placeholder="Username" required/>
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="pass" id="pass" placeholder="Password" required/>
                             </div>
-						
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join"
+                                <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join Us"
                                   href="<?php echo base_url('index.php/Web/Register'); ?>"/>
                             </div>
                         </form>
