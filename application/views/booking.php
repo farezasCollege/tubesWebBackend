@@ -19,30 +19,30 @@
 <body style="background-color: #b7ecec">
 
     <nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
-                    <a class="navbar-brand" href="#">
-                        <!-- navbar branding -->
-                        <img src="<?php echo base_url ('assets/img/branding.png')?>">
-                    </a>                
+        <a class="navbar-brand" href="#">
+            <!-- navbar branding -->
+            <img src="<?php echo base_url ('assets/img/branding.png')?>">
+        </a>                
 
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item" style="cursor: pointer;">
-                            <a href="<?php echo base_url ('index.php/Web/fareza')?>" class="nav-link" id="signup-butt">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#service">Service</a> 
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a> 
-                        </li>
-                        <li class="nav-item" style="cursor: pointer;">
-                            <a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
-                        </li>
-                        <li class="nav-item" style="cursor: pointer;">
-                            <a href="<?php echo base_url ('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
-                        </li>
-                    </ul>
-                    
-                </nav>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="cursor: pointer;">
+                <a href="<?php echo base_url ('index.php/Web/fareza')?>" class="nav-link" id="signup-butt">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#service">Service</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a> 
+            </li>
+            <li class="nav-item" style="cursor: pointer;">
+                <a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
+            </li>
+            <li class="nav-item" style="cursor: pointer;">
+                <a href="<?php echo base_url ('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
+            </li>
+        </ul>
+
+    </nav>
 
     <div class="main">
 
@@ -77,25 +77,26 @@
 
                     </div>
                 </div>
-                <form action="" method="POST" id="booking-form">
-                <div class="booking-form">
-                   
+
+                <form action="<?php echo base_url('index.php/booking_controller/submit_pesan/'); ?>" method="POST" id="booking-form">
+                    <div class="booking-form">
+
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
                         <div class="form-group form-input">
-                            <input type="text" name="nama" id="name" value="" required/>
-                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" name="nama" id="name" value="<?php echo $_SESSION['uname']; ?>" readonly/>
+                            <label for="name" class="form-label">username</label>
                         </div>
                         <div class="form-group form-input">
                             <input type="email" name="email" id="email" value="" required/>
                             <label for="email" class="form-label">Your Email</label>
                         </div>
-                        <div class="form-group form-input">
+                        <!-- <div class="form-group form-input">
                             <input type="text" name="phone" id="phone" value="" required/>
                             <label for="name" class="form-label">Phone Number</label>
-                        </div>
+                        </div> -->
                         <br>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <div class="select-list">
                                 <select name="gender" id="Gender" required>
                                     <option value="">Gender</option>
@@ -103,53 +104,55 @@
                                     <option value="female">Female</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group form-input">
+                        </div> -->
+                        <!-- <div class="form-group form-input">
                             <input type="text" name="ktp" id="ktp" value="" required/>
                             <label for="name" class="form-label">KTP/Student Card</label>
                         </div>
                         <div class="form-group form-input">
                             <input type="text" name="birth" id="birth" value="" required/>
                             <label for="name" class="form-label">Birth Date</label>
-                        </div>
-                        <br>
+                        </div> -->
+                        <!-- <br> -->
                         <h4>Booking Date</h4>
                         <div class="form-group form-input">
-                            <input type="Date" name="tgl" id="tgl" value="" required/>
+                            <input type="Date" name="tgl" id="tgl" required/>
                         </div>
                         <br>
                         <div class="form-group">
-                            <div class="select-list">
+                            <input type="time" name="jam">
+                            <!-- <div class="select-list">
                                 <select name="time" id="time" required>
                                     <option value="">Time</option>
                                     <option value="6pm">6:00 PM</option>
                                     <option value="7pm">7:00 PM</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <br>
                             <div class="select-list">
                                 <select name="service" id="service" required>
-                                    <option value="1">Nail Art</option>
-                                    <option value="2">Creambath</option>
-                                    <option value="3">Smooting</option>
-                                    <option value="4">Spa</option>
-                                    <option value="5">Hair Cut</option>
+                                    <option value="Nail Art">Nail Art</option>
+                                    <option value="Creambath">Creambath</option>
+                                    <option value="Smooting">Smooting</option>
+                                    <option value="Spa">Spa</option>
+                                    <option value="Hair Cut">Hair Cut</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-submit">
-                            <input type="submit" value="Book now" class="submit" id="submit" name="submit" />
+                            <input type="submit" class="submit" id="submit" name="submit" />
                             <a href="#" class="vertify-booking"></a>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
-
     </div>
 
+</div>
 
-    
+
+
 </body>
 </html>
