@@ -12,9 +12,10 @@
 
 		function index(){
 			if ('role'=='customer') {
-				$this->load->view(''); //redirect ke dashboard customer
+				//$this->load->view(''); //redirect ke dashboard customer
+				echo "kontol";
 			}else{
-				$this->load->view('inputkodebooking') //redirect ke homepage pegawai
+				$this->load->view('inputkodebooking'); //redirect ke homepage pegawai
 			}
 		}
 	}
