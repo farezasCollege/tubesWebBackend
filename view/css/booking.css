@@ -26,6 +26,7 @@
   .nav-link{
     padding-left: 5%;
     padding-right: 5%;
+    border-bottom: pink;
   }
 
   .navbar-nav .btn-primary{
@@ -48,14 +49,6 @@
   .row-margin{
     margin-top: 2%;
   }
-
-
-
-
-
-
-
-
 
   display-flex, .booking-content {
     display: flex;
