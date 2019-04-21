@@ -17,7 +17,7 @@ class homepage extends CI_Controller
 		$username = $this->input->post('uname-input');
 		$password = $this->input->post('pass-input');
 
-		print_r($_POST);
+		//print_r($_POST);
 
 		$q = $this->homepage_model->cek_login($username,$password)->result_array();
 
@@ -50,6 +50,10 @@ class homepage extends CI_Controller
 		}
 	}
 
+	function homepage_cust(){
+		$this->load->view('homepage_customer');
+	}
+
 	function cek_login(){
 		echo $this->input->post('uname-input');
 		echo $this->input->post('pass-input');
@@ -57,7 +61,7 @@ class homepage extends CI_Controller
 
 	function logout(){
 		$this->session->sess_destroy();
-		redirect(site_url('index(2)'));
+		redirect(base_url());
 	}
 }
 

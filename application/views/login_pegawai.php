@@ -16,14 +16,14 @@
     <div class="container col-lg-4">
       <h2 class="text-center">Selamat Datang</h2>
       <hr>
-      <form>
+      <form method="POST" action="<?php  ?>">
         <div class="form-group">
           <label>Username</label>
-          <input type="text" name="" class="form-control" placeholder="Masukkan username">
+          <input type="text" name="uname" class="form-control" placeholder="Masukkan username">
         </div>
         <div class="form-group">
           <label>Password</label>
-          <input type="password" name="" class="form-control" placeholder="Masukkan password">
+          <input type="password" name="pass" class="form-control" placeholder="Masukkan password">
         </div>
         <br>
         <button type="submit" class="btn btn-primary btn-block">Masuk</button>

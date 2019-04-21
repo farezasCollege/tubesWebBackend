@@ -18,9 +18,38 @@
 </head> 
 <body style="background-color: #b7ecec">
 
-    <nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
+    <nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top">
         <a class="navbar-brand" href="#">
             <!-- navbar branding -->
+            <img src="<?php echo base_url();?>/assets/branding.png">
+        </a>                
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url(); ?>">Home</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('/index.php/booking_controller/'); ?>">Booking</a> 
+            </li>
+            <li class="nav-item dropdown" style="cursor: pointer;">
+                <button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" ><?php echo $_SESSION['nama'] ?></a>
+
+                    <!-- ini ke controller edit profile -->
+                    <a class="dropdown-item" href="<?php echo base_url(''); ?>">Edit profile</a> 
+
+                    <a class="dropdown-item" href="<?php echo base_url('/index.php/homepage/logout/'); ?>">Logout</a>
+                </div>
+
+            </li>
+        </ul>
+    </nav>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
+        <a class="navbar-brand" href="#">
+             navbar branding 
             <img src="<?php echo base_url ('assets/img/branding.png')?>">
         </a>                
 
@@ -42,7 +71,7 @@
             </li>
         </ul>
 
-    </nav>
+    </nav> -->
 
     <div class="main">
 

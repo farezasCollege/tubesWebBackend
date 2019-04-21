@@ -6,10 +6,10 @@
 
 	<title>welcome page</title>
 
-	<link rel="stylesheet" type="text/css" href="./css/welcome.css">
-	<link rel="stylesheet" type="text/css" href="./css/section2.css">
-	<link rel="stylesheet" type="text/css" href="./css/section3.css">
-	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/welcome.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/section2.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/section3.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
 			<a class="navbar-brand" href="#">
 				<!-- navbar branding -->
-				<img src="assets/branding.png">
+				<img src="<?php echo base_url();?>/assets/branding.png">
 			</a>				
 
 			<ul class="navbar-nav ml-auto">
@@ -34,47 +34,59 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#about">About</a> 
 				</li>
-				<div class="btn-group">
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="<?php echo base_url('index.php/Web/booking/'); ?>" class="nav-link" id="signup-butt">Signup</a>
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#login" class="nav-link" id="login-butt">Login</a>
-					</li>
-				</div>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('/index.php/booking_controller/'); ?>">Booking</a> 
+				</li>
+				<li class="nav-item dropdown" style="cursor: pointer;">
+					<button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" ><?php echo $_SESSION['nama'] ?></a>
+
+						<!-- ini ke controller edit profile -->
+						<a class="dropdown-item" href="<?php echo base_url(''); ?>">Edit profile</a> 
+
+						<a class="dropdown-item" href="<?php echo base_url('/index.php/homepage/logout/'); ?>">Logout</a>
+					</div>
+
+				</li>
+			</ul>
+		</nav>
+		<nav class="navbar navbar-expand-lg navbar-light col-12 fixed-top hid-this">
+			<a class="navbar-brand" href="#">
+				<!-- navbar branding -->
+				<img src="<?php echo base_url();?>/assets/branding.png">
+			</a>				
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#pertama-banget"> Home </a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#service">Service</a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('/index.php/booking_controller/'); ?>">Booking</a> 
+				</li>
+				<li class="nav-item dropdown" style="cursor: pointer;">
+					<button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" ><?php echo session_data ?></a>
+						<a class="dropdown-item" href="<?php echo base_url(); ?>">Edit profile</a>
+						<a class="dropdown-item" href="<?php base_url(); ?>">Logout</a>
+					</div>
+				</li>
 			</ul>
 		</nav>
 	</div>
 </head>
 <body>
-	<img class="wallpaper" src="./assets/wallpaper2.png">
+	<img class="wallpaper" src="<?php echo base_url();?>/assets/wallpaper2.png">
 	<section id="pertama-banget">
-		<div class="row">
-			<nav class="navbar navbar-expand-lg navbar-light col-12 fixed-top hid-this">
-				<a class="navbar-brand" href="#">
-					<!-- navbar branding -->
-					<img src="assets/branding.png">
-				</a>				
-
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#pertama-banget"> Home </a> 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#service">Service</a> 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a> 
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="<?php echo base_url('index.php/Web/Register/'); ?>" class="nav-link" id="signup-butt">Signup</a>
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#login" class="nav-link" data-toggle="modal" data-target="#login-form" id="login-butt">Login</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
 		<div id="carousel-foto" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-foto" data-slide-to="0" class="active"></li>
@@ -83,13 +95,13 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="assets/salon.jpg" class="d-block w-100 min-vh-100">
+					<img src="<?php echo base_url();?>/assets/salon.jpg" class="d-block w-100 min-vh-100">
 				</div>
 				<div class="carousel-item">
-					<img src="assets/spa.jpg" class="d-block w-100 min-vh-100">
+					<img src="<?php echo base_url();?>/assets/spa.jpg" class="d-block w-100 min-vh-100">
 				</div>
 				<div class="carousel-item">
-					<img src="assets/3.jpg" class="d-block w-100 min-vh-100">
+					<img src="<?php echo base_url();?>/assets/3.jpg" class="d-block w-100 min-vh-100">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carousel-foto" role="button" data-slide="prev">
@@ -107,10 +119,10 @@
 		<div class="modal fade" id="login-form" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
-				<div class="modal-content" style="border-radius: 25px !important;">
+				<div class="modal-content" style="border-radius: 14px !important;">
 					<div class="container-login">
-						<h3>LOGIN</h3>
-						<form action="<?php echo base_url('index.php/homepage/login_action/');?>" method="POST">
+						<h3 >LOGIN</h3>
+						<form action="" method="POST">
 							<div class="form-group">
 
 								<label>username</label>
@@ -119,8 +131,8 @@
 								<label>password</label>						
 								<input id="pass" class="input-pass" placeholder="password" name="pass-input" type="password" required>
 
-								<button type="submit" class="btn btn-primary tombollogin">Login</button>
-								<a class="forgotpass"  href="#forgot">Forgot Password?</a>
+								<button type="submit" class="btn btn-primary">Login</button>
+								<a href="#forgot">Forgot Password?</a>
 							</div>
 						</form>
 					</div>
@@ -128,6 +140,11 @@
 			</div>
 		</div>
 		<!-- end of login --> 
+		<script type="text/javascript">
+			$("#login-butt").click(function(){
+
+			});
+		</script>
 	</section>
 
 	<section id="service">
