@@ -104,6 +104,34 @@
 
   </footer>
   <!-- Footer -->
+  <div class="container col-8 content">
+		<h2>DATA CUSTOMER</h2>
+		<table id="tab-customer" class="display" width="100%">
+			<thead>
+				<tr>
+					<th>Nama</th>
+					<th>NIK</th>
+					<th>Tanggal lahir</th>
+					<th>Alamat email</th>
+					<th>Nomor telepon</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>haha</td>
+					<td>12345</td>
+					<td>05-05-05</td>
+					<td>haha@gmail.com</td>
+					<td>123456789</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#tab-customer").DataTable();
+		})
+	</script>
 
 
    

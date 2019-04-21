@@ -65,7 +65,7 @@
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
                             <div class="form-group"> 
-                                <input type="Date" name="date" id="name" placeholder="Date Of Birth" required/>
+                                <input type="Date" name="date" id="name" placeholder="Date Of Birth" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required/>
                             </div>
                             <div class="form-group">
                                 <input type="email" name="email" id="email" placeholder="Your Email" required/>
