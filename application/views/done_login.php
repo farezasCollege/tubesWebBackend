@@ -6,17 +6,16 @@
 
 	<title>welcome page</title>
 
-	<link rel="stylesheet" type="text/css" href="./css/welcome.css">
-	<link rel="stylesheet" type="text/css" href="./css/section2.css">
-	<link rel="stylesheet" type="text/css" href="./css/section3.css">
-	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/welcome.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/section2.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/section3.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/login.css'); ?>">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 	<div class="row">
 		<nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
@@ -134,46 +133,26 @@
 	<div class="row container list-jasa">
 		<div class="container col-4">
 			<ul>
-				<li id="li1">
-					<a href="<?php echo base_url('assets/service/nail.jpg')?>">Nail Art</a>
-					<span style="margin-left: 50%;">Rp.200.000,-</span>
+				<li>
+					Potong rambut
+					<span style="margin-left: 40%;">Rp.50.000,-</span>
 				</li>
-				<li id="li2">
-					Creambath
-					<span style="margin-left: 43%;">Rp.100.000,-</span>
+				<li>
+					Potong kuku
+					<span style="margin-left: 45%;">Rp.20.000,-</span>
 				</li>
-				<li id="li3">
-					Smoothing
-					<span style="margin-left: 43%;">Rp.200.000,-</span>
+				<li>
+					Potong kambing
+					<span style="margin-left: 30%;">Rp.1.050.000,-</span>
 				</li>
-				<li id="li4">
-					Spa
-					<span style="margin-left: 58%;">Rp.300.000,-</span>
-				</li>
-				<li id="li5">
-					Hair Extension
-					<span style="margin-left: 35%;">Rp.700.000,-</span>
-				</li>
-				<li id="li6">
-					Hair Coloring
-					<span style="margin-left: 37%;">Rp.800.000,-</span>
-				</li>
-				<li id="li7">
-					Hair Cut
-					<span style="margin-left: 47%;">Rp.150.000,-</span>
+				<li>
+					Potong bebek angsa
+					<span style="margin-left: 24%;">Rp.550.000,-</span>
 				</li>
 			</ul>
 		</div>
 		<div class="container col-6">
-			<div class="container" id="conimg">
-					<img src="assets/services/nail.jpg" height="100%" width="100%" id="nail">
-					<img src="assets/services/color.jpg" height="100%" width="100%" id="color">
-					<img src="assets/services/cream.jpg" height="100%" width="100%" id="cream">
-					<img src="assets/services/cut.jpg" height="100%" width="100%" id="cut">
-					<img src="assets/services/ext.jpg" height="100%" width="100%" id="ext">
-					<img src="assets/services/smoothing.jpg" height="100%" width="100%" id="smoothing">
-					<img src="assets/services/spa.jpg" height="100%" width="100%" id="spa">
-			</div>
+
 		</div>
 	</div>
 </section>
@@ -237,17 +216,7 @@
 					});
 				}
 			});
-
-
 		});
-
-		$(document).ready(function(){
-			$('#nail').hide();
-		}
-
-		$('#li1').click(function(){
-			$('#nail').show();
-		})
 	</script>
 </body>
 </html>

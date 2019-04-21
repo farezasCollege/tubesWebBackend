@@ -76,6 +76,9 @@ class homepage extends CI_Controller
 		$this->session->sess_destroy();
 		redirect(site_url('index(2)'));
 	}
-}
 
+    function data() {
+		$this->load->view('done_login');
+	}
+}
 ?>

@@ -27,9 +27,9 @@ class Web extends CI_Controller {
 		$data['judul'] = 'Form Register';		
 		$this->form_validation->set_rules('nama','Nama','required');
 		$this->form_validation->set_rules('date','Date','required');
-		$this->form_validation->set_rules('email','email','required');
-		$this->form_validation->set_rules('Username','username','required');
-		$this->form_validation->set_rules('pass','pass');
+		$this->form_validation->set_rules('email','Email','required');
+		$this->form_validation->set_rules('Username','Username','required');
+		$this->form_validation->set_rules('pass','Password');
  
 		if($this->form_validation->run() != false){
 			$this->Salon->GetCustomer();
@@ -63,4 +63,24 @@ class Web extends CI_Controller {
 		}
 
 	}
-}
+
+public function ubah($Username)
+{
+	$data['judul'] = 'Edit';
+
+	$data['User'] = $this->Salon->GetCustumerUser($Username);
+	$this->form_validation->set_rules('nama','Nama','required');
+	$this->form_validation->set_rules('date','Date','required');
+	$this->form_validation->set_rules('email','email','required');
+	$this->form_validation->set_rules('Username','username','required');
+	$this->form_validation->set_rules('pass','pass');
+
+
+	if($this->form_validation->run()==false){	
+		$this->load->view('', $data);
+		$this->load->view('templates/footer');
+	} else{
+		$this->Mahasiswa_model->UbahDataCustomer();
+		redirect('Web');
+	}
+}}
