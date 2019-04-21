@@ -51,7 +51,7 @@
                 <div class="booking-image">
                     <div class="row">
 
-                        <img src="<?php echo base_url ('assets/img/book.jpg')?>" style="width: 100%; height: 850px">
+                        <img src="<?php echo base_url ('assets/img/wallpaper.jpg')?>" style="width: 100%; height: 850px">
 
                         
 
