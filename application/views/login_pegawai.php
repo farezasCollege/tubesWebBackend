@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/css/login_pegawai.css');?>">
 
     <title>Salon Citra</title>
   </head>
@@ -16,7 +16,7 @@
     <div class="container col-lg-4">
       <h2 class="text-center">Selamat Datang</h2>
       <hr>
-      <form method="POST" action="<?php  ?>">
+      <form method="POST" action="<?php echo base_url('/index.php/login_peg_control/login/'); ?>">
         <div class="form-group">
           <label>Username</label>
           <input type="text" name="uname" class="form-control" placeholder="Masukkan username">

@@ -26,17 +26,17 @@
 				$akun=$dbase->result_array();
 
 				$peg_session=array(
-					'uname' => $username,
-					'nama' => $q[0]['Nama'],
+					'uname' => $un,
+					'nama' => $akun[0]['Nama'],
 					'status' => "login",
-					'role' => $q[0]['Role']
+					'role' => $akun[0]['Role']
 				);
 
 				$this->session->set_userdata($peg_session);
 
 				if($akun[0]['Role']=="pegawai"){
 					//redirect(base_url('/index.php/  ')) //redirect ke page pegawai
-					
+					echo "masuk";
 				}else{
 					echo "anda tidak bisa login disini";
 				}

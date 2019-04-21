@@ -26,7 +26,7 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>">Home</a> 
+                <a class="nav-link" href="<?php echo base_url('/index.php/homepage/homepage_cust/'); ?>">Home</a> 
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('/index.php/booking_controller/'); ?>">Booking</a> 
@@ -117,7 +117,7 @@
                             <label for="name" class="form-label">username</label>
                         </div>
                         <div class="form-group form-input">
-                            <input type="email" name="email" id="email" value="" required/>
+                            <input type="email" name="email" id="email" value="<?php echo $_SESSION['email']; ?>" required/>
                             <label for="email" class="form-label">Your Email</label>
                         </div>
                         <!-- <div class="form-group form-input">

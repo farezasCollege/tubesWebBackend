@@ -37,8 +37,8 @@ class homepage extends CI_Controller
 			// browsing cara retrieve session data
 
 			if ($q[0]['Role']=='customer') {
-				//redirect(base_url('index.php/')); //redirect ke dashboard customer
-				echo "customer";
+				redirect(base_url('/index.php/homepage/homepage_cust/')); //redirect ke dashboard customer
+				//echo "customer";
 			}else{
 				//redirect(base_url(''));  redirect ke homepage pegawai
 				echo "pegawai";
