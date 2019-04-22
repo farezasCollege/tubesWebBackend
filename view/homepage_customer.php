@@ -34,21 +34,19 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#about">About</a> 
 				</li>
-				<li class="nav-item" style="cursor: pointer;">
-					<a href="#signup" class="nav-link" id="signup-butt">Signup</a>
-				</li>
-				<li class="nav-item" style="cursor: pointer;">
-					<a href="#login" class="nav-link" id="login-butt">Login</a>
+				<li class="nav-item dropdown" style="cursor: pointer;">
+					<button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" ><?php echo session_data ?></a>
+						<a class="dropdown-item" href="<?php echo base_url(); ?>">Edit profile</a>
+						<a class="dropdown-item" href="<?php base_url(); ?>">Logout</a>
+					</div>
+
 				</li>
 			</ul>
 		</nav>
-	</div>
-</head>
-<body>
-	<img class="wallpaper" src="./assets/wallpaper2.png">
-	<section id="pertama-banget">
-		<div class="row">
-			<nav class="navbar navbar-expand-lg navbar-light col-12 fixed-top hid-this">
+		<nav class="navbar navbar-expand-lg navbar-light col-12 fixed-top hid-this">
 				<a class="navbar-brand" href="#">
 					<!-- navbar branding -->
 					<img src="assets/branding.png">
@@ -64,15 +62,22 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#about">About</a> 
 					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#signup" class="nav-link" id="signup-butt">Signup</a>
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#login" class="nav-link" data-toggle="modal" data-target="#login-form" id="login-butt">Login</a>
+					<li class="nav-item dropdown" style="cursor: pointer;">
+						<button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+						<div class="dropdown-menu">
+						<a class="dropdown-item" ><?php echo session_data ?></a>
+						<a class="dropdown-item" href="<?php echo base_url(); ?>">Edit profile</a>
+						<a class="dropdown-item" href="<?php base_url(); ?>">Logout</a>
+						</div>
 					</li>
 				</ul>
 			</nav>
-		</div>
+	</div>
+</head>
+<body>
+	<img class="wallpaper" src="./assets/wallpaper2.png">
+	<section id="pertama-banget">
 		<div id="carousel-foto" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-foto" data-slide-to="0" class="active"></li>

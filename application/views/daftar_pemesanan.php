@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>daftar_pegawai</title>
+	<title>SISFO manager</title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/daftar_customer.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
@@ -20,11 +20,11 @@
 
 		<div class="row navigation-nav">
 			<ul>
-				<li class="nav-item">
-					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
-				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>" style="color:white">Lihat pegawai</a>
+					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index1')?>">Lihat customer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Lihat data pembayaran</a>
@@ -32,27 +32,25 @@
 			</ul>
 		</div>
 	</nav>
-
+ 
 	<table class="container content table mt-6 col-8">
                 <thead>
                     <tr>
-                        <th class="text-center" scope="col">NAMA</th>
-                        <th class="text-center" scope="col">DATE OF BIRTH</th>
-                        <th class="text-center" scope="col">EMAIL</th>
                         <th class="text-center" scope="col">USERNAME</th>
-                        <th class="text-center" scope="col">ROLE</th>
-						<th class="text-center" scope="col">AKSI</th>
+                        <th class="text-center" scope="col">SERVICE</th>
+                        <th class="text-center" scope="col">STATUS</th>
+                        <th class="text-center" scope="col">TIME</th>
+                        <th class="text-center" scope="col">DATE</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><?php foreach ($Pegawai as $Peg) : ?>
-                        <td class="text-center"><?= $Peg['Nama']; ?></td>
-                        <td class="text-center"><?= $Peg['Date']; ?></td>
-                        <td class="text-center"><?= $Peg['Email']; ?></td>
-                        <td class="text-center"><?= $Peg['Username']; ?></td>
-						<td class="text-center"><?= $Peg['Role']; ?></td>
+                    <tr><?php foreach ($Pemesanan as $pem) : ?>
+                        <td class="text-center"><?= $Pem['username']; ?></td>
+                        <td class="text-center"><?= $Pem['id_layanan']; ?></td>
+                        <td class="text-center"><?= $Pem['status_bayar']; ?></td>
+                        <td class="text-center"><?= $Pem['jam_pelayanan']; ?></td>
+						<td class="text-center"><?= $Pem['tanggal_pelayanan']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url();?>Web/ubah/<?= $Peg['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>
