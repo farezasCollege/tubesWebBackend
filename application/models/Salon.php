@@ -39,37 +39,40 @@ class Salon extends CI_Model {
 			'Date' => $this->input->post('date', true),
 			'Email' => $this->input->post('email', true),
 			'Password' => $this->input->post('pass', true),
-			'Role' => 'customer',
+			'Role' => 'customer'
 		);
 		//use query builder class to update data mahasiswa based on id
 		$this->db->where('Username',$Username);
 		$this->db->update('user',$data);
 	}
 
-public function GetAllPegawai()
+	public function GetAllPegawai()
 	{
 		$peg='Pegawai';
 		$query=$this->db->query("SELECT * FROM user WHERE Role='$peg'");
 		return $query->result_array();
 	}
 
-	public function GetPegawai(){
+	public function GetPegawai()
+	{
 		$data = [
-		"Nama" => $this->input->post('nama', true),
-		"Date" => $this->input->post('date', true),
-		"Email" => $this->input->post('email', true),
-		"Username" => $this->input->post('username', true),
-		"Password" => $this->input->post('pass', true),
-		"Role" => $this->input->post('role', true),
-	];
-	$arrData = array(
-		'Nama' => $_POST['nama'],
-		'Date' => $_POST['date'],
-		'Email' => $_POST['email'],
-		'Username' => $_POST['Username'],
-		'Password' => $_POST['pass'],
-		'Role' => 'Pegawai'
+			"Nama" => $this->input->post('nama', true),
+			"Date" => $this->input->post('date', true),
+			"Email" => $this->input->post('email', true),
+			"Username" => $this->input->post('username', true),
+			"Password" => $this->input->post('pass', true),
+			"Role" => $this->input->post('role', true) 
+		];
+
+		$arrData = array(
+			'Nama' => $_POST['nama'],
+			'Date' => $_POST['date'],
+			'Email' => $_POST['email'],
+			'Username' => $_POST['Username'],
+			'Password' => $_POST['pass'],
+			'Role' => 'Pegawai'
 		);
-$this->db->insert('user',$arrData);
-}}
+		$this->db->insert('user',$arrData);
+	}
+}
 
