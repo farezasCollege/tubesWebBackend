@@ -6,11 +6,13 @@
 
 	<title>welcome page</title>
 
+	
 	<link rel="stylesheet" type="text/css" href="./css/welcome.css">
 	<link rel="stylesheet" type="text/css" href="./css/section2.css">
 	<link rel="stylesheet" type="text/css" href="./css/section3.css">
 	<link rel="stylesheet" type="text/css" href="./css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -135,7 +137,7 @@
 		<div class="container col-4">
 			<ul>
 				<li id="li1">
-					<a href="<?php echo base_url('assets/service/nail.jpg')?>">Nail Art</a>
+					Nail Art
 					<span style="margin-left: 50%;">Rp.200.000,-</span>
 				</li>
 				<li id="li2">
@@ -232,13 +234,10 @@
 					$('html, body, section').animate({
 						scrollTop: $(hash).offset().top
 					}, 800, function(){
-
 						window.location.hash = hash;
 					});
 				}
 			});
-
-
 		});
 
 		$(document).ready(function(){

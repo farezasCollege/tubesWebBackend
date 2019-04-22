@@ -17,9 +17,14 @@ class Web extends CI_Controller {
 		$data['customer'] = $this->Salon->GetAllCustomer();
 		$this->load->view('daftar_customer', $data);
 	}
-    public function booking()
+    public function view()
 	{
-		$this->load->view('daftar_customer');
+		$this->load->view('viewdata');
+	}
+
+	public function booking()
+	{
+		$this->load->view('booking');
 	}
 
 	  public function Register()
@@ -40,48 +45,23 @@ class Web extends CI_Controller {
 		}
 
 	}
-	public function Book()
-	{
-		//Load page_header and page_index from views
-		$data['judul'] = 'Formbooking';		
-		$this->form_validation->set_rules('nama','Nama','required');
-		$this->form_validation->set_rules('email','Email','required');
-		$this->form_validation->set_rules('phone','Phone','required');
-		$this->form_validation->set_rules('gender','Gender','required');
-		$this->form_validation->set_rules('ktp','KTP');
-		$this->form_validation->set_rules('birth','Date');
-		$this->form_validation->set_rules('tgl','Bdate');
-		$this->form_validation->set_rules('time','Time');
-		$this->form_validation->set_rules('service','Service');
- 
-		if($this->form_validation->run() != false){
-			$this->Salon->Getbooking();
-		}else{
-		$this->load->view('booking',$data);
-		$this->load->view('header');
-		$this->load->view('footer');
-		}
-
-	}
 
 public function ubah($Username)
 {
 	$data['judul'] = 'Edit';
-
 	$data['User'] = $this->Salon->GetCustumerUser($Username);
 	$this->form_validation->set_rules('nama','Nama','required');
 	$this->form_validation->set_rules('date','Date','required');
-	$this->form_validation->set_rules('email','email','required');
-	$this->form_validation->set_rules('Username','username','required');
-	$this->form_validation->set_rules('pass','pass');
-
+	$this->form_validation->set_rules('email','Email','required');
+	$this->form_validation->set_rules('Username','Username','required');
+	$this->form_validation->set_rules('pass','Password');
 
 	if($this->form_validation->run()==false){	
 		$this->load->view('', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('edit_profile');
 	} else{
-		$this->Mahasiswa_model->UbahDataCustomer();
-		redirect('Web');
+		$this->Salon->UbahDataCustomer();
+		$this->load->view('edit_profile');
 	}
 }
 
@@ -89,7 +69,7 @@ public function index2()
 {
 	$data['judul'] = 'DaftarPegawai';
 	$data['Pegawai'] = $this->Salon->GetAllPegawai();
-	$this->load->view('Daftar_pegawai', $data);
+	$this->load->view('daftar_pegawai', $data);
 }
 
 public function RegisterPeg()
