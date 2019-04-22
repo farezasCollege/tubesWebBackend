@@ -38,6 +38,7 @@ class Web extends CI_Controller {
  
 		if($this->form_validation->run() != false){
 			$this->Salon->GetCustomer();
+			header("Location: ".base_url('/index.php/Register/'));
 		}else{
 			$this->load->view('Register',$data);
 			$this->load->view('header');
@@ -76,8 +77,6 @@ class Web extends CI_Controller {
 
 
 	// }
-
-	
 
 public function ubah($Username)
 {
