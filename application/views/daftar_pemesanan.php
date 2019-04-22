@@ -27,7 +27,7 @@
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat data pembayaran</a>
+					<a class="nav-link" href="#">Lihat data Pemesanan</a>
 				</li>
 			</ul>
 		</div>
@@ -44,7 +44,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><?php foreach ($Pemesanan as $pem) : ?>
+                    <tr><?php foreach ($pemesanan as $Pem) : ?>
                         <td class="text-center"><?= $Pem['username']; ?></td>
                         <td class="text-center"><?= $Pem['id_layanan']; ?></td>
                         <td class="text-center"><?= $Pem['status_bayar']; ?></td>

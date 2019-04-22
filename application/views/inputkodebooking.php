@@ -24,12 +24,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><?php foreach ($pemesanan as $pem) : ?>
+                    <tr><?php foreach ($kodee as $Pem) : ?>
                         <td class="text-center"><?= $Pem['username']; ?></td>
                         <td class="text-center"><?= $Pem['id_layanan']; ?></td>
                         <td class="text-center"><?= $Pem['status_bayar']; ?></td>
                         <td class="text-center"><?= $Pem['jam_pelayanan']; ?></td>
-						<td class="text-center"><?= $Pem['tanggal_pelayanan']; ?></td>
+					            	<td class="text-center"><?= $Pem['tanggal_pelayanan']; ?></td>
                         <td class="text-center">
                         </td>
                     </tr>
