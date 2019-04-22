@@ -20,11 +20,11 @@
 
 		<div class="row navigation-nav">
 			<ul>
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class="nav-link cust" href="#">Lihat customer</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat pegawai</a>
+				<li class="nav-item active">
+					<a class="nav-link peg" style="color:white" href="#">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Lihat data pembayaran</a>
@@ -45,14 +45,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><?php foreach ($customer as $cus) : ?>
-                        <td class="text-center"><?= $cus['Nama']; ?></td>
-                        <td class="text-center"><?= $cus['Date']; ?></td>
-                        <td class="text-center"><?= $cus['Email']; ?></td>
-                        <td class="text-center"><?= $cus['Username']; ?></td>
-						<td class="text-center"><?= $cus['Role']; ?></td>
+                    <tr><?php foreach ($Pegawai as $Peg) : ?>
+                        <td class="text-center"><?= $Peg['Nama']; ?></td>
+                        <td class="text-center"><?= $Peg['Date']; ?></td>
+                        <td class="text-center"><?= $Peg['Email']; ?></td>
+                        <td class="text-center"><?= $Peg['Username']; ?></td>
+						<td class="text-center"><?= $Peg['Role']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url(); ?>Web/ubah/<?= $cus['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
+                            <a href="<?= base_url(); ?>Web/ubah/<?= $Peg['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>

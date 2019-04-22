@@ -51,29 +51,9 @@
                 <div class="booking-image">
                     <div class="row">
 
-                        <img src="<?php echo base_url ('assets/img/hair.jpg')?>" style="width: 100%; height: 850px">
+                        <img src="<?php echo base_url ('assets/img/wallpaper.jpg')?>" style="width: 100%; height: 850px">
 
-                        <!-- <div class="column">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-
-                        </div>
-                        <div class="column">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-
-                        </div>  
-                        <div class="column">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-                            <img src="creambath.jpg" style="width:100%">
-
-                        </div> -->
+                        
 
                     </div>
                 </div>
