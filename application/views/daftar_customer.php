@@ -15,16 +15,16 @@
 	<nav class="col-4">
 		<a class="logo" href="#">
 			<!-- navbar branding -->
-			<img src="<?php echo base_url(); ?>assets/branding.png">
+			<img src="<?php echo base_url();?>assets/branding.png">
 		</a>
 
 		<div class="row navigation-nav">
 			<ul>
 				<li class="nav-item active">
-					<a class="nav-link cust" href="#">Lihat customer</a>
+					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index1')?>">Lihat customer</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat pegawai</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Lihat data pembayaran</a>
@@ -52,7 +52,7 @@
                         <td class="text-center"><?= $cus['Username']; ?></td>
 						<td class="text-center"><?= $cus['Role']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url(); ?>Web/ubah/<?= $cus['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
+                            <a href="<?= base_url();?>Web/ubah/<?= $cus['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>

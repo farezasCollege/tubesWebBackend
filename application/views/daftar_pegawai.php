@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SISFO manager</title>
+	<title>daftar_pegawai</title>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/daftar_customer.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
@@ -15,16 +15,16 @@
 	<nav class="col-4">
 		<a class="logo" href="#">
 			<!-- navbar branding -->
-			<img src="<?php echo base_url(); ?>assets/branding.png">
+			<img src="<?php echo base_url();?>assets/branding.png">
 		</a>
 
 		<div class="row navigation-nav">
 			<ul>
 				<li class="nav-item">
-					<a class="nav-link cust" href="#">Lihat customer</a>
+					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link peg" style="color:white" href="#">Lihat pegawai</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>" style="color:white">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Lihat data pembayaran</a>
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 	</nav>
- 
+
 	<table class="container content table mt-6 col-8">
                 <thead>
                     <tr>
@@ -52,7 +52,7 @@
                         <td class="text-center"><?= $Peg['Username']; ?></td>
 						<td class="text-center"><?= $Peg['Role']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url(); ?>Web/ubah/<?= $Peg['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
+                            <a href="<?= base_url();?>Web/ubah/<?= $Peg['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>

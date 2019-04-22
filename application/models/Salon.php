@@ -25,8 +25,6 @@ class Salon extends CI_Model {
 		$this->db->insert('user',$arrData);
 	}
 
-}
-
 
 	public function GetCustumerUser($Username)
 	{
@@ -47,32 +45,6 @@ class Salon extends CI_Model {
 		$this->db->where('Username',$Username);
 		$this->db->update('user',$data);
 	}
-
-	public function Getbooking(){
-		$data = [
-		"Nama" => $this->input->post('nama', true),
-		"Email" => $this->input->post('email', true),
-		"Phone" => $this->input->post('phone', true),
-		"Gender" => $this->input->post('gender', true),
-		"KTP" => $this->input->post('ktp', true),
-		"Date" => $this->input->post('birth', true),
-		"Bdate" => $this->input->post('tgl', true),
-		"Time" => $this->input->post('time', true),
-		"Service" => $this->input->post('service', true),
-	];
-	$arrData = array(
-		'Nama' => $_POST['nama'],
-		'Email' => $_POST['email'],
-		'Phone' => $_POST['phone'],
-		'Gender' => $_POST['gender'],
-		'KTP' => $_POST['ktp'],
-		'Date' => $_POST['birth'],
-		'Bdate' => $_POST['pass'],
-		'Time' => $_POST['time'],
-		'Service' => $_POST['service']
-		);
-$this->db->insert('booking',$arrData);
-}
 
 public function GetAllPegawai()
 	{
