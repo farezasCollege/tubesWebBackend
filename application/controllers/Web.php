@@ -82,7 +82,7 @@ class Web extends CI_Controller {
 
 
 	// }
-=======
+
 	}
 
 public function ubah($Username)
