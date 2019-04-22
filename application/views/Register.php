@@ -65,7 +65,11 @@
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
                             <div class="form-group"> 
+
+                                <input type="Date" name="date" id="name" placeholder="Date Of Birth" required/>
+
                                 <input type="Date" name="date" id="name" placeholder="Date Of Birth" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required/>
+
                             </div>
                             <div class="form-group">
                                 <input type="email" name="email" id="email" placeholder="Your Email" required/>
@@ -83,7 +87,7 @@
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
+                        <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sign up image"></figure>
                         <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
     
 
