@@ -78,7 +78,7 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join Us"
-                                  href="<?php echo base_url('index.php/Web/Register'); ?>"/>
+                                  href="<?php echo base_url();?>"/>
                             </div>
                         </form>
                     </div>
@@ -89,7 +89,7 @@
                         <a href="<?php echo site_url('Landing/thankyou'); ?>" class="signup-image-link">liat thankyou</a>
 
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sign up image"></figure>
-                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
+                        <a href="<?php echo base_url();?>" class="signup-image-link">Already Have Account? Click Here</a>
     
 
                     </div>

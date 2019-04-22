@@ -74,5 +74,16 @@ class Salon extends CI_Model {
 		);
 		$this->db->insert('user',$arrData);
 	}
-}
 
+
+
+public function cariDatabooking()
+{
+	$kode = $this->input->post('kode', true);
+	$this->db->from('pemesanan');
+  $query=$this->db->get();
+  return $query->result_array();
+
+	//return data mahasiswa that has been searched
+}
+}

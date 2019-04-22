@@ -121,6 +121,11 @@ public function RegisterPeg()
 		$this->load->view('footer');
 	}
 }
+   public function search()
+  {
+  if ($this->input->post('kode')) {
+	$data['pemesanan'] = $this->Salon->cariDatabooking();
+	}
+	$this->load->view('inputkodebooking');
 }
-
-
+}
