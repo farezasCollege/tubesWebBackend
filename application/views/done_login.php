@@ -6,17 +6,16 @@
 
 	<title>welcome page</title>
 
-	<link rel="stylesheet" type="text/css" href="./css/welcome.css">
-	<link rel="stylesheet" type="text/css" href="./css/section2.css">
-	<link rel="stylesheet" type="text/css" href="./css/section3.css">
-	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/welcome.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/section2.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/section3.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php base_url('css/login.css'); ?>">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 	<div class="row">
 		<nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
@@ -35,14 +34,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#about">About</a> 
 				</li>
-				<div class="btn-group">
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="<?php echo base_url('index.php/Web/booking/'); ?>" class="nav-link" id="signup-butt">Signup</a>
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#login" class="nav-link" id="login-butt">Login</a>
-					</li>
-				</div>
+				<li class="nav-item" style="cursor: pointer;">
+					<a href="<?php echo base_url('index.php/Web/booking/'); ?>" class="nav-link" id="signup-butt">Signup</a>
+				</li>
+				<li class="nav-item" style="cursor: pointer;">
+					<a href="#login" class="nav-link" id="login-butt">Login</a>
+				</li>
 			</ul>
 		</nav>
 	</div>
@@ -103,28 +100,27 @@
 			</a>
 		</div>
 
-		<!-- buat login nya -->
-		<!-- begin of login -->
-		<div class="modal fade" id="login-form" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content" style="border-radius: 25px !important;">
-					<div class="container-login">
-						<h3>LOGIN</h3>
-						<form action="<?php echo base_url('index.php/homepage/login_action/');?>" method="POST">
-							<div class="form-group">
+	<!-- buat login nya -->
+	<!-- begin of login -->
+	<div class="modal fade" id="login-form" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content" style="border-radius: 25px !important;">
+				<div class="container-login">
+					<h3>LOGIN</h3>
+					<form action="<?php echo base_url('index.php/homepage/login_action/');?>" method="POST">
+						<div class="form-group">
 
-								<label>username</label>
-								<input id="uname" class="input-uname" placeholder="username" name="uname-input" type="text" required>
+							<label>username</label>
+							<input id="uname" class="input-uname" placeholder="username" name="uname-input" type="text" required>
 
-								<label>password</label>						
-								<input id="pass" class="input-pass" placeholder="password" name="pass-input" type="password" required>
+							<label>password</label>						
+							<input id="pass" class="input-pass" placeholder="password" name="pass-input" type="password" required>
 
-								<button type="submit" class="btn btn-primary tombollogin">Login</button>
-								<a class="forgotpass"  href="#forgot">Forgot Password?</a>
-							</div>
-						</form>
-					</div>
+							<button type="submit" class="btn btn-primary tombollogin">Login</button>
+							<a class="forgotpass"  href="#forgot">Forgot Password?</a>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -137,83 +133,59 @@
 	<div class="row container list-jasa">
 		<div class="container col-4">
 			<ul>
-				<li id="li1">
-					<a href="<?php echo base_url('assets/service/nail.jpg')?>">Nail Art</a>
-					<span style="margin-left: 50%;">Rp.200.000,-</span>
+				<li>
+					Potong rambut
+					<span style="margin-left: 40%;">Rp.50.000,-</span>
 				</li>
-				<li id="li2">
-					Creambath
-					<span style="margin-left: 43%;">Rp.100.000,-</span>
+				<li>
+					Potong kuku
+					<span style="margin-left: 45%;">Rp.20.000,-</span>
 				</li>
-				<li id="li3">
-					Smoothing
-					<span style="margin-left: 43%;">Rp.200.000,-</span>
+				<li>
+					Potong kambing
+					<span style="margin-left: 30%;">Rp.1.050.000,-</span>
 				</li>
-				<li id="li4">
-					Spa
-					<span style="margin-left: 58%;">Rp.300.000,-</span>
-				</li>
-				<li id="li5">
-					Hair Extension
-					<span style="margin-left: 35%;">Rp.700.000,-</span>
-				</li>
-				<li id="li6">
-					Hair Coloring
-					<span style="margin-left: 37%;">Rp.800.000,-</span>
-				</li>
-				<li id="li7">
-					Hair Cut
-					<span style="margin-left: 47%;">Rp.150.000,-</span>
+				<li>
+					Potong bebek angsa
+					<span style="margin-left: 24%;">Rp.550.000,-</span>
 				</li>
 			</ul>
 		</div>
 		<div class="container col-6">
-			<div class="container" id="conimg">
-					<img src="assets/services/nail.jpg" height="100%" width="100%" id="nail">
-					<img src="assets/services/color.jpg" height="100%" width="100%" id="color">
-					<img src="assets/services/cream.jpg" height="100%" width="100%" id="cream">
-					<img src="assets/services/cut.jpg" height="100%" width="100%" id="cut">
-					<img src="assets/services/ext.jpg" height="100%" width="100%" id="ext">
-					<img src="assets/services/smoothing.jpg" height="100%" width="100%" id="smoothing">
-					<img src="assets/services/spa.jpg" height="100%" width="100%" id="spa">
-			</div>
+
 		</div>
 	</div>
 </section>
 
-			</div>
+<section id="about">
+	<h1>About us</h1>
+	<div class="row">
+		<div class="container">
+			<p>haha</p>		
 		</div>
-	</section>
 
-	<section id="about">
-		<h1>About us</h1>
-		<div class="row">
-			<div class="container">
-				<p>haha</p>		
+	</div>
+	<div class="row">
+		<div class="container col-4 kontak">
+			<h4>Contact us</h4>
+			<div class="row email">
+				<img class="row" src="">
+				<p class="row">saloncitra@xxx.com</p>
 			</div>
-
-		</div>
-		<div class="row">
-			<div class="container col-4 kontak">
-				<h4>Contact us</h4>
-				<div class="row email">
-					<img class="row" src="">
-					<p class="row">saloncitra@xxx.com</p>
-				</div>
-				<div class="row phone">
-					<img class="row" src="">
-					<p class="row">08512345678</p>
-				</div>
-			</div>
-			<div class="container col-4 profil-salon">
-				<h4>Profil salon</h4>
-				<div class="row">
-					<p>salon kami adalah salon terpercaya yang karyawannya ramah-ramah. Selain itu, kami juga menawarkan jasa yang endeus abiss</p>
-				</div>
+			<div class="row phone">
+				<img class="row" src="">
+				<p class="row">08512345678</p>
 			</div>
 		</div>
-	</section>
-	<script type="text/javascript">
+		<div class="container col-4 profil-salon">
+			<h4>Profil salon</h4>
+			<div class="row">
+				<p>salon kami adalah salon terpercaya yang karyawannya ramah-ramah. Selain itu, kami juga menawarkan jasa yang endeus abiss</p>
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
 		 // auto-appear navbar on-scroll
 
 		 document.getElementById("topnav2").style.top = "-1000px";
@@ -244,17 +216,7 @@
 					});
 				}
 			});
-
-
 		});
-
-		$(document).ready(function(){
-			$('#nail').hide();
-		}
-
-		$('#li1').click(function(){
-			$('#nail').show();
-		})
 	</script>
 </body>
 </html>

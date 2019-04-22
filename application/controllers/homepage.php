@@ -60,6 +60,9 @@ class homepage extends CI_Controller
 		$this->session->sess_destroy();
 		redirect(base_url());
 	}
-}
 
+    function data() {
+		$this->load->view('done_login');
+	}
+}
 ?>
