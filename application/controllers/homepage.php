@@ -15,8 +15,9 @@ class homepage extends CI_Controller
 
 	function login_action(){
 		$username = $this->input->post('uname-input');
-		$password = $this->input->post('pass-input');
+		$password = mb_substr(md5($this->input->post('pass-input')),0,10);
 
+		//echo $password; 
 		//print_r($_POST);
 
 		$q = $this->homepage_model->cek_login($username,$password)->result_array();
@@ -41,7 +42,7 @@ class homepage extends CI_Controller
 				//echo "customer";
 			}else{
 				//redirect(base_url(''));  redirect ke homepage pegawai
-				echo "pegawai";
+				echo "tidak bisa masuk lewat sini";
 			}
 
 		}else{
@@ -54,10 +55,6 @@ class homepage extends CI_Controller
 		$this->load->view('homepage_customer');
 	}
 
-	function cek_login(){
-		echo $this->input->post('uname-input');
-		echo $this->input->post('pass-input');
-	}
 
 	function logout(){
 		$this->session->sess_destroy();

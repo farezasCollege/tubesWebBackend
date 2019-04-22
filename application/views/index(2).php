@@ -172,12 +172,6 @@
 		<div class="container col-6">
 			<div class="container" id="conimg">
 					<img src="assets/services/nail.jpg" height="100%" width="100%" id="nail">
-					<img src="assets/services/color.jpg" height="100%" width="100%" id="color">
-					<img src="assets/services/cream.jpg" height="100%" width="100%" id="cream">
-					<img src="assets/services/cut.jpg" height="100%" width="100%" id="cut">
-					<img src="assets/services/ext.jpg" height="100%" width="100%" id="ext">
-					<img src="assets/services/smoothing.jpg" height="100%" width="100%" id="smoothing">
-					<img src="assets/services/spa.jpg" height="100%" width="100%" id="spa">
 			</div>
 		</div>
 	</div>
@@ -235,9 +229,7 @@
 
 				if (this.hash !== "") {
 					event.preventDefault();
-
 					var hash = this.hash;
-
 					$('html, body, section').animate({
 						scrollTop: $(hash).offset().top
 					}, 800, function(){
@@ -247,13 +239,33 @@
 			});
 		});
 
-		$(document).ready(function(){
-			$('#nail').hide();
-		}
-
-		$('#li1').click(function(){
-			$('#nail').show();
-		})
+		$("#li1").hover(function(){ 
+		      	$("#nail").css("visibility","visible");
+			});
+		$("#li2").hover(function(){   
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/cream.jpg')");
+			});	
+		$("#li3").hover(function(){  
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/smoothing.jpg')");
+			});	
+		$("#li4").hover(function(){   
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/spa1.jpg')","height":"100px","width":"180px"});
+			});	
+		$("#li5").hover(function(){   
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/ext2.jpg')");
+			});	
+		$("#li6").hover(function(){  
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ombre.jpg')","height":"90%","width":"90%"});
+			});	
+		$("#li7").hover(function(){ 
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/cut.jpg')","height":"100%","width":"100%"});
+			});						
 	</script>
 </body>
 </html>

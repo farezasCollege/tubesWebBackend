@@ -45,7 +45,7 @@
 							<a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
 						</li>
 						<li class="nav-item" style="cursor: pointer;">
-							<a href="<?php echo base_url('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
+							<a href="<?php echo base_url('index.php/booking_controller/')?>" class="nav-link" id="signup-butt">Booking</a>
 						</li>
 					</ul>
 					
@@ -65,11 +65,7 @@
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
                             <div class="form-group"> 
-
-                                <input type="Date" name="date" id="name" placeholder="Date Of Birth" required/>
-
                                 <input type="Date" name="date" id="name" placeholder="Date Of Birth" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required/>
-
                             </div>
                             <div class="form-group">
                                 <input type="email" name="email" id="email" placeholder="Your Email" required/>
@@ -82,13 +78,18 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join Us"
-                                  href="<?php echo base_url('index.php/Web/Register'); ?>"/>
+                                  href="<?php echo base_url();?>"/>
                             </div>
                         </form>
                     </div>
                     <div class="signup-image">
+
+                        <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
+                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>
+                        <a href="<?php echo site_url('Landing/thankyou'); ?>" class="signup-image-link">liat thankyou</a>
+
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sign up image"></figure>
-                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
+                        <a href="<?php echo base_url();?>" class="signup-image-link">Already Have Account? Click Here</a>
     
 
                     </div>

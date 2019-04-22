@@ -33,16 +33,7 @@
 
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url();?>">Home</a> 
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#service">Service</a> 
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#about">About</a> 
-						</li>
-						<li class="nav-item" style="cursor: pointer;">
-							<a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
+							<a class="nav-link" href="<?php echo base_url('/index.php/homepage/homepage_cust/');?>">Home</a> 
 						</li>
 						<li class="nav-item" style="cursor: pointer;">
 							<a href="<?php echo base_url('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
