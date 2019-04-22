@@ -19,7 +19,7 @@ class Salon extends CI_Model {
 			'Date' => $_POST['date'],
 			'Email' => $_POST['email'],
 			'Username' => $_POST['Username'],
-			'Password' => $_POST['pass'],
+			'Password' => md5($_POST['pass']),
       		'Role' => 'customer'
 	    );
 		$this->db->insert('user',$arrData);

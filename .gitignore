@@ -58,3 +58,5 @@ brancheja/application/views/inputkodebooking.php
 brancheja/application/views/RegisterPeg.php
 application/config/database.php
 application/config/database.php
+application/libraries/Datatables.php
+application/config/database.php
