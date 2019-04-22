@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> controller nya bukan view, namanya controlle
 <html>
 <head>
 	<meta charset="utf-8">
