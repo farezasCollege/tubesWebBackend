@@ -19,7 +19,7 @@ class Web extends CI_Controller {
 	}
     public function booking()
 	{
-		$this->load->view('daftar_customer');
+		$this->load->view('booking');
 	}
 
 	  public function Register()
