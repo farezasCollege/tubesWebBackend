@@ -56,3 +56,5 @@ brancheja/application/controllers/login_peg_control.php
 brancheja/application/models/inputkodebooking_m.php
 brancheja/application/views/inputkodebooking.php
 brancheja/application/views/RegisterPeg.php
+application/config/database.php
+application/config/database.php

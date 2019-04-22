@@ -6,25 +6,22 @@
 
 	<title>welcome page</title>
 
-	
-	<link rel="stylesheet" type="text/css" href="./css/welcome.css">
-	<link rel="stylesheet" type="text/css" href="./css/section2.css">
-	<link rel="stylesheet" type="text/css" href="./css/section3.css">
-	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/welcome.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/section2.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/section3.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-	
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 	<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 	<div class="row">
 		<nav class="navbar navbar-expand-lg navbar-light warna col-12 fixed-top" id="topnav2">
 			<a class="navbar-brand" href="#">
 				<!-- navbar branding -->
-				<img src="assets/branding.png">
+				<img src="<?php echo base_url();?>/assets/branding.png">
 			</a>				
 
 			<ul class="navbar-nav ml-auto">
@@ -37,47 +34,59 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#about">About</a> 
 				</li>
-				<div class="btn-group">
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="<?php echo base_url('index.php/Web/booking/'); ?>" class="nav-link" id="signup-butt">Signup</a>
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#login" class="nav-link" id="login-butt">Login</a>
-					</li>
-				</div>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('/index.php/booking_controller/'); ?>">Booking</a> 
+				</li>
+				<li class="nav-item dropdown" style="cursor: pointer;">
+					<button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" ><?php echo $_SESSION['nama'] ?></a>
+
+						<!-- ini ke controller edit profile -->
+						<a class="dropdown-item" href="<?php echo base_url(''); ?>">Edit profile</a> 
+
+						<a class="dropdown-item" href="<?php echo base_url('/index.php/homepage/logout/'); ?>">Logout</a>
+					</div>
+
+				</li>
+			</ul>
+		</nav>
+		<nav class="navbar navbar-expand-lg navbar-light col-12 fixed-top hid-this">
+			<a class="navbar-brand" href="#">
+				<!-- navbar branding -->
+				<img src="<?php echo base_url();?>/assets/branding.png">
+			</a>				
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#pertama-banget"> Home </a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#service">Service</a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url('/index.php/booking_controller/'); ?>">Booking</a> 
+				</li>
+				<li class="nav-item dropdown" style="cursor: pointer;">
+					<button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" ><?php echo session_data ?></a>
+						<a class="dropdown-item" href="<?php echo base_url(); ?>">Edit profile</a>
+						<a class="dropdown-item" href="<?php base_url(); ?>">Logout</a>
+					</div>
+				</li>
 			</ul>
 		</nav>
 	</div>
 </head>
 <body>
-	<img class="wallpaper" src="./assets/wallpaper2.png">
+	<img class="wallpaper" src="<?php echo base_url();?>/assets/wallpaper2.png">
 	<section id="pertama-banget">
-		<div class="row">
-			<nav class="navbar navbar-expand-lg navbar-light col-12 fixed-top hid-this">
-				<a class="navbar-brand" href="#">
-					<!-- navbar branding -->
-					<img src="assets/branding.png">
-				</a>				
-
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#pertama-banget"> Home </a> 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#service">Service</a> 
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a> 
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="<?php echo base_url('index.php/Web/Register/'); ?>" class="nav-link" id="signup-butt">Signup</a>
-					</li>
-					<li class="nav-item" style="cursor: pointer;">
-						<a href="#login" class="nav-link" data-toggle="modal" data-target="#login-form" id="login-butt">Login</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
 		<div id="carousel-foto" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-foto" data-slide-to="0" class="active"></li>
@@ -86,13 +95,13 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="assets/salon.jpg" class="d-block w-100 min-vh-100">
+					<img src="<?php echo base_url();?>/assets/salon.jpg" class="d-block w-100 min-vh-100">
 				</div>
 				<div class="carousel-item">
-					<img src="assets/spa.jpg" class="d-block w-100 min-vh-100">
+					<img src="<?php echo base_url();?>/assets/spa.jpg" class="d-block w-100 min-vh-100">
 				</div>
 				<div class="carousel-item">
-					<img src="assets/3.jpg" class="d-block w-100 min-vh-100">
+					<img src="<?php echo base_url();?>/assets/3.jpg" class="d-block w-100 min-vh-100">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carousel-foto" role="button" data-slide="prev">
@@ -110,10 +119,10 @@
 		<div class="modal fade" id="login-form" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
-				<div class="modal-content" style="border-radius: 25px !important;">
+				<div class="modal-content" style="border-radius: 14px !important;">
 					<div class="container-login">
-						<h3>LOGIN</h3>
-						<form action="<?php echo base_url('index.php/homepage/login_action/');?>" method="POST">
+						<h3 >LOGIN</h3>
+						<form action="" method="POST">
 							<div class="form-group">
 
 								<label>username</label>
@@ -122,66 +131,46 @@
 								<label>password</label>						
 								<input id="pass" class="input-pass" placeholder="password" name="pass-input" type="password" required>
 
-								<button type="submit" class="btn btn-primary tombollogin">Login</button>
-								<a class="forgotpass"  href="#forgot">Forgot Password?</a>
+								<button type="submit" class="btn btn-primary">Login</button>
+								<a href="#forgot">Forgot Password?</a>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- end of login --> 
-</section>
+		<!-- end of login --> 
+		<script type="text/javascript">
+			$("#login-butt").click(function(){
 
-<section id="service">
-	<h1>Our Services</h1>
-	<div class="row container list-jasa">
-		<div class="container col-4">
-			<ul>
-				<li id="li1">
-					Nail Art
-					<span style="margin-left: 50%;">Rp.200.000,-</span>
-				</li>
-				<li id="li2">
-					Creambath
-					<span style="margin-left: 43%;">Rp.100.000,-</span>
-				</li>
-				<li id="li3">
-					Smoothing
-					<span style="margin-left: 43%;">Rp.200.000,-</span>
-				</li>
-				<li id="li4">
-					Spa
-					<span style="margin-left: 58%;">Rp.300.000,-</span>
-				</li>
-				<li id="li5">
-					Hair Extension
-					<span style="margin-left: 35%;">Rp.700.000,-</span>
-				</li>
-				<li id="li6">
-					Hair Coloring
-					<span style="margin-left: 37%;">Rp.800.000,-</span>
-				</li>
-				<li id="li7">
-					Hair Cut
-					<span style="margin-left: 47%;">Rp.150.000,-</span>
-				</li>
-			</ul>
-		</div>
-		<div class="container col-6">
-			<div class="container" id="conimg">
-					<img src="assets/services/nail.jpg" height="100%" width="100%" id="nail">
-					<img src="assets/services/color.jpg" height="100%" width="100%" id="color">
-					<img src="assets/services/cream.jpg" height="100%" width="100%" id="cream">
-					<img src="assets/services/cut.jpg" height="100%" width="100%" id="cut">
-					<img src="assets/services/ext.jpg" height="100%" width="100%" id="ext">
-					<img src="assets/services/smoothing.jpg" height="100%" width="100%" id="smoothing">
-					<img src="assets/services/spa.jpg" height="100%" width="100%" id="spa">
+			});
+		</script>
+	</section>
+
+	<section id="service">
+		<h1>Our Services</h1>
+		<div class="row container list-jasa">
+			<div class="container col-4">
+				<ul>
+					<li>
+						Potong rambut
+						<span style="margin-left: 40%;">Rp.50.000,-</span>
+					</li>
+					<li>
+						Potong kuku
+						<span style="margin-left: 45%;">Rp.20.000,-</span>
+					</li>
+					<li>
+						Potong kambing
+						<span style="margin-left: 30%;">Rp.1.050.000,-</span>
+					</li>
+					<li>
+						Potong bebek angsa
+						<span style="margin-left: 24%;">Rp.550.000,-</span>
+					</li>
+				</ul>
 			</div>
-		</div>
-	</div>
-</section>
+			<div class="container col-6">
 
 			</div>
 		</div>
@@ -241,19 +230,12 @@
 					$('html, body, section').animate({
 						scrollTop: $(hash).offset().top
 					}, 800, function(){
+
 						window.location.hash = hash;
 					});
 				}
 			});
 		});
-
-		$(document).ready(function(){
-			$('#nail').hide();
-		}
-
-		$('#li1').click(function(){
-			$('#nail').show();
-		})
 	</script>
 </body>
 </html>

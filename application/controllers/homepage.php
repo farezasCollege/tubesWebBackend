@@ -16,55 +16,42 @@ class homepage extends CI_Controller
 	function login_action(){
 		$username = $this->input->post('uname-input');
 		$password = $this->input->post('pass-input');
-		// echo implode("", $_POST["username"]);
 
-		// print_r($_POST);
-
-		// echo $_POST["uname-input"];
-		// echo $_POST["pass-input"];
-
-		// echo $username;
-		// echo $password;
+		//print_r($_POST);
 
 		$q = $this->homepage_model->cek_login($username,$password)->result_array();
 
 		$cek=$this->homepage_model->cek_login($username,$password)->num_rows();
-		//echo $cek;
-
-		// $query= $this->db->query("select role from user where username='$username' and password='$password'")->result_array();ini bisa
-
-		// print_r($this->homepage_model->cek_login($username,$password)->result_array()); ini juga bisa
 
 		if($cek > 0){ 
-			//echo "masuk kontol"; bisa masuk
-			//print_r($q[0]['nama']);
 			$data_session = array(
 				'uname' => $username,
-				'nama' => $q[0]['nama'],
-				'email' => $q[0]['email'],
+				'nama' => $q[0]['Nama'],
+				'email' => $q[0]['Email'],
 				'status' => "login",
-				'role' => $q[0]['role']
+				'role' => $q[0]['Role']
 			);
 
-			// print_r($data_session);
 
 			$this->session->set_userdata($data_session);
 			// browsing cara retrieve session data
 
-			//redirect(site_url('redirect_homepage')); ini masih ragu
-			if ($q[0]['role']=='customer') {
-				//redirect(base_url('index.php/')); //redirect ke dashboard customer
-				echo "kontol";
+			if ($q[0]['Role']=='customer') {
+				redirect(base_url('/index.php/homepage/homepage_cust/')); //redirect ke dashboard customer
+				//echo "customer";
 			}else{
 				//redirect(base_url(''));  redirect ke homepage pegawai
+				echo "pegawai";
 			}
 
 		}else{
-			// echo $username;
-			// echo "0 ";
-			// echo $password;
-			echo "Username dan password salah !";
+			$this->session->set_flashdata("confirm","gagal");
+			echo "gagal";
 		}
+	}
+
+	function homepage_cust(){
+		$this->load->view('homepage_customer');
 	}
 
 	function cek_login(){
@@ -74,7 +61,7 @@ class homepage extends CI_Controller
 
 	function logout(){
 		$this->session->sess_destroy();
-		redirect(site_url('index(2)'));
+		redirect(base_url());
 	}
 
     function data() {

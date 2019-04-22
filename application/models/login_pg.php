@@ -1,7 +1,10 @@
 <?php
-	class homepage_model extends CI_Model
+	
+	class login_pg extends CI_Model
 	{
-		function cek_login($uname,$pass){
+		
+		function get_pg($uname,$pass)
+		{
 			return $this->db->query("select * from user where Username='$uname' and Password='$pass'");
 		}
 	}
