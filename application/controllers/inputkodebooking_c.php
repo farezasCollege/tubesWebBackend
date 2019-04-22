@@ -23,6 +23,7 @@
 			$kodee = $_POST['kode'];
 			$query = $this->inputkodebooking_m->cek_kode($kodee);
 			print_r($query->result_array());
+			$this->load->view('inputkodebooking');
 		}
 
 	}
