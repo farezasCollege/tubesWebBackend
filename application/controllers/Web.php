@@ -29,22 +29,12 @@ class Web extends CI_Controller {
 
 	  public function Register()
 	{
-
-		//Load page_header and page_index from views
-		//nama field, nama kolom, 
-
-
 		$data['judul'] = 'Form Register';		
 		$this->form_validation->set_rules('nama','Nama','required');
 		$this->form_validation->set_rules('date','Date','required');
 		$this->form_validation->set_rules('email','Email','required');
 		$this->form_validation->set_rules('Username','Username','required');
-
 		$this->form_validation->set_rules('pass','Password','required');
-		
-
-		$this->form_validation->set_rules('pass','Password');
-
  
 		if($this->form_validation->run() != false){
 			$this->Salon->GetCustomer();
@@ -87,7 +77,7 @@ class Web extends CI_Controller {
 
 	// }
 
-	}
+	
 
 public function ubah($Username)
 {

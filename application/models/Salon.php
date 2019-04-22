@@ -25,8 +25,6 @@ class Salon extends CI_Model {
 		$this->db->insert('user',$arrData);
 	}
 
-}
-
 
 	public function GetCustumerUser($Username)
 	{
