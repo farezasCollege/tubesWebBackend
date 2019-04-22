@@ -13,7 +13,7 @@
     <title>Booking Page</title>
 
     <!-- Main css -->
-    <link rel="stylesheet" href="<?php echo base_url ('assets/css/booking.css')?>">
+    <link rel="stylesheet" href="<?php echo base_url ('/assets/css/booking.css')?>">
     
 </head> 
 <body style="background-color: #b7ecec">
@@ -107,8 +107,9 @@
                     </div>
                 </div>
 
+                <div class="booking-form">
                 <form action="<?php echo base_url('index.php/booking_controller/submit_pesan/'); ?>" method="POST" id="booking-form">
-                    <div class="booking-form">
+                    
 
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
@@ -173,8 +174,8 @@
                             <input type="submit" class="submit" id="submit" name="submit" />
                             <a href="#" class="vertify-booking"></a>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

@@ -45,7 +45,7 @@
 							<a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
 						</li>
 						<li class="nav-item" style="cursor: pointer;">
-							<a href="<?php echo base_url('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
+							<a href="<?php echo base_url('index.php/booking_controller/')?>" class="nav-link" id="signup-butt">Booking</a>
 						</li>
 					</ul>
 					
@@ -84,7 +84,7 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
-                        <a href="<?php echo base_url('index.php/Web'); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>
+                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>
                         <a href="<?php echo site_url('Landing/thankyou'); ?>" class="signup-image-link">liat thankyou</a>
 
                     </div>

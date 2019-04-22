@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2019 at 01:28 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.40
+-- Waktu pembuatan: 22 Apr 2019 pada 11.55
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jenis_jasa`
+-- Struktur dari tabel `jenis_jasa`
 --
 
 CREATE TABLE `jenis_jasa` (
@@ -34,10 +34,18 @@ CREATE TABLE `jenis_jasa` (
   `harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `jenis_jasa`
+--
+
+INSERT INTO `jenis_jasa` (`id_layanan`, `nama_jasa`, `harga`) VALUES
+('ly-01', 'Nail Art', 50000),
+('ly-02', 'Creambath', 20000);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pemesanan`
+-- Struktur dari tabel `pemesanan`
 --
 
 CREATE TABLE `pemesanan` (
@@ -49,10 +57,21 @@ CREATE TABLE `pemesanan` (
   `tanggal_pelayanan` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `pemesanan`
+--
+
+INSERT INTO `pemesanan` (`kode_booking`, `username`, `id_layanan`, `status_bayar`, `jam_pelayanan`, `tanggal_pelayanan`) VALUES
+('psn-2', 'saaa', 'ly-02', 0, '01:00:00', '2019-04-01'),
+('psn-3', '1234', 'ly-01', 0, '01:00:00', '2019-04-01'),
+('psn-5', '1234', 'ly-01', 0, '15:00:00', '2019-04-23'),
+('psn-6', '1234', 'ly-01', 0, '01:00:00', '2019-04-09'),
+('psn-9', '1234', 'ly-01', 0, '01:00:00', '2019-04-16');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -65,10 +84,12 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`Nama`, `Date`, `Email`, `Username`, `Password`, `Role`) VALUES
+('ejaa', '2019-04-04', 'haha@gmail', '1234', '81dc9bdb52', 'customer'),
+('eja', '2019-04-09', 'haha@gmail.com', 'dada12', 'e10adc3949', 'customer'),
 ('nisa', '123', 'nisarahma128@yahoo.c', 'RTR', '13124141', 'Customer'),
 ('captainAmerika', '123', 'nisarahma128@yahoo.c', 'saaa', '23534635', 'customer');
 
@@ -77,19 +98,19 @@ INSERT INTO `user` (`Nama`, `Date`, `Email`, `Username`, `Password`, `Role`) VAL
 --
 
 --
--- Indexes for table `jenis_jasa`
+-- Indeks untuk tabel `jenis_jasa`
 --
 ALTER TABLE `jenis_jasa`
   ADD PRIMARY KEY (`id_layanan`);
 
 --
--- Indexes for table `pemesanan`
+-- Indeks untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`kode_booking`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Username`);

@@ -36,7 +36,7 @@
 			// print_r($arrData);
 
 			$this->book->Getbooking($arrData);
-			
+			header("Location: ".base_url('/index.php/booking_controller/'));
 		}
 	}
 ?>
