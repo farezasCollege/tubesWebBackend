@@ -16,7 +16,8 @@
 		}
 
 		function getDataBooking(){
-			$data=$this->jasaPemesanan_model->getPemesanan()->result_array();
+			$data=$this->jasaPemesanan_model->getPemesanan()->result_array(); //ini udah jadi array, kalo mau ambil datanya pake:
+			// $data[0]['nama_kolom']
 
 			
 		}
