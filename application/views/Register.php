@@ -59,10 +59,7 @@
                 <div class="signup-content"> 
                     <div class="signup-form" style="margin-top:60px">
                         <h2 class="form-title" align="center">Sign up</h2>
-
-
                         <form action="<?php echo base_url('/index.php/Web/Register/')?>" method="POST" class="register-form" id="register-form">
-
                         <div class="form-group">
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>

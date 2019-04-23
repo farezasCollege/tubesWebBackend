@@ -12,12 +12,6 @@ class Web extends CI_Controller {
 
 	}
 
-	public function thankyou()
-	{
-		$this->load->view('thankyou');
-	}
-
-
 	public function index()
 	{
 		$data['judul'] = 'DaftarCustomer';
@@ -156,5 +150,11 @@ class Web extends CI_Controller {
 		}else{
 			$this->load->view('inputkodebooking');
 		}
+	}
+
+	public function hapus($Username)
+	{
+		$hapus=$this->Salon->hapusDataPegawai($Username);
+		redirect('Web/view/');
 	}
 }
