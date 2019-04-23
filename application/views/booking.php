@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="booking-form">
-                <form action="<?php echo base_url('index.php/booking_controller/getView/'); ?>" method="POST" id="booking-form">
+                <form action="<?php echo base_url('/index.php/booking_controller/getView/'); ?>" method="POST" id="booking-form">
 
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
@@ -171,7 +171,7 @@
                         <br>
                         <div class="form-submit">
                             <button type="submit" class="submit" id="submit" name="submit" >Book Now</button>
-                            <a href="<?php echo base_url('index.php/Web/thankyou') ?>" class="vertify-booking"></a>
+                            <a href="<?php echo base_url('/index.php/Web/thankyou/') ?>" class="vertify-booking"></a>
                         </div>
                     </form>
                 </div>
