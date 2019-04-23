@@ -15,6 +15,7 @@ body {
  padding: 10px;
 }
 
+
 .search-box:hover > .search-txt {
  width: 240px;
  padding: 0 6px;

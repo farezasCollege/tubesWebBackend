@@ -32,12 +32,12 @@ class booking_controller extends CI_Controller
 		$mail=$_SESSION['email'];
 		$kode=$arr_data['kode_booking'];
 
-		$this->book->Getbooking(getView());
+		$this->book->Getbooking($arr_data);
 		//$this->kirim($mail,$kode);
 
 		header("Location:".base_url('/index.php/Web/thankyou/'));
 
-		header("refresh:5;Location: ".base_url('/index.php/booking_controller/'));
+		//header("Location: ".base_url('/index.php/booking_controller/'));
 	}
 
 	function kirim($email_user,$kode_booking){ 
