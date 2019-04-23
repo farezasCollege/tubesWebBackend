@@ -28,22 +28,22 @@ class Salon extends CI_Model {
 
 	public function GetCustumerUser($Username)
 	{
-		$this->db->where('Username', $Username);
-		return $this->db->get('user')->row_array();
+		// $this->db->where('Username', $Username);
+		// return $this->db->get('user')->result_array();
+		return $this->db->query("select * from user where Username='$Username'");
 	}
 
-	public function UbahDataCustomer()
+	public function UbahDataCustomer($arrayCust,$uname)
 	{
-		$data = array (
-			'Nama' => $this->input->post('nama', true),
-			'Date' => $this->input->post('date', true),
-			'Email' => $this->input->post('email', true),
-			'Password' => $this->input->post('pass', true),
-			'Role' => 'customer'
-		);
 		//use query builder class to update data mahasiswa based on id
-		$this->db->where('Username',$Username);
-		$this->db->update('user',$data);
+		$namaa=$arrayCust['Nama'];
+		$tgl=$arrayCust['tgl'];
+		$emaill=$arrayCust['Email'];
+		$pass=md5($arrayCust['Password']);
+
+		$this->db->query("UPDATE user SET Nama='$namaa', Date='$tgl',Email='$emaill',Password='$pass' WHERE Username='$uname'");
+		// $this->db->where('Username',$uname);
+		// $this->db->update('user',$arrayCust);
 	}
 
 	public function GetAllPegawai()

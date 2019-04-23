@@ -3,7 +3,10 @@
 class email extends CI_Controller
 {
 
-	function kirim($email_user,$kode_booking){
+	function kirim(){
+		$mail=$this->session->flashdata();
+		$kode=;
+
 		$this->email->from('loig.fried@gmail.com', 'Salon citra');
 		$this->email->to($email_user);
 		$this->email->subject('Kode Booking Salon Citra');

@@ -35,12 +35,14 @@
 				$this->session->set_userdata($peg_session);
 
 				if($akun[0]['Role']=="pegawai"){
-					//redirect(base_url('/index.php/  ')) //redirect ke page pegawai
+					redirect(base_url('/index.php/inputkodebooking_c/')) //redirect ke page pegawai
 					echo "masuk";
 				}else{
+					//tampilkan login gagal di view
 					echo "anda tidak bisa login disini";
 				}
 			}else{
+				//tampilkan login gagal di view
 				echo "maaf username atau password salah";
 			}
 		}
