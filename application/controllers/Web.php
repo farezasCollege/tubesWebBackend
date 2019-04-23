@@ -50,6 +50,8 @@ class Web extends CI_Controller {
 			header("refresh:5;Location: ".base_url('/index.php/Web/Register/'));
 		}else{
 			$this->load->view('Register',$data);
+			$this->load->view('header');
+			$this->load->view('footer');
 		}
 
 
