@@ -170,7 +170,7 @@
                         </div>
                         <br>
                         <div class="form-submit">
-                            <input type="submit" value="Book Now"class="submit" id="submit" name="submit" />
+                            <button type="submit" class="submit" id="submit" name="submit" >Book Now</button>
                             <a href="<?php echo base_url('index.php/Web/thankyou') ?>" class="vertify-booking"></a>
                         </div>
                     </form>
