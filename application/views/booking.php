@@ -80,7 +80,7 @@
                 <div class="booking-image">
                     <div class="row">
 
-                        <img src="<?php echo base_url ('assets/img/hair.jpg')?>" style="width: 100%; height: 850px">
+                        <img src="<?php echo base_url ('assets/img/wallpaper.png')?>" style="width: 100%; height: 850px">
 
                         <!-- <div class="column">
                             <img src="creambath.jpg" style="width:100%">
@@ -171,7 +171,7 @@
 
                         <div class="form-submit">
                             <input type="submit" class="submit" id="submit" name="submit" />
-                            <a href="#" class="vertify-booking"></a>
+                            <a href="<?php echo base_url('index.php/Web/thankyou') ?>" class="vertify-booking"></a>
                         </div>
                     </form>
                 </div>

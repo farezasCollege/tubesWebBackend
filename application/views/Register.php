@@ -42,7 +42,7 @@
 							<a class="nav-link" href="#about">About</a> 
 						</li>
 						<li class="nav-item" style="cursor: pointer;">
-							<a href="<?php echo base_url ('index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
+							<a href="<?php echo base_url ('/index.php/Web/Register')?>" class="nav-link" id="signup-butt">Signup</a>
 						</li>
 						<li class="nav-item" style="cursor: pointer;">
 							<a href="<?php echo base_url('index.php/booking_controller/')?>" class="nav-link" id="signup-butt">Booking</a>
@@ -60,7 +60,9 @@
                     <div class="signup-form" style="margin-top:60px">
                         <h2 class="form-title" align="center">Sign up</h2>
 
-                        <form action="<?php echo base_url('/index.php/Web/Register/'); ?>" method="POST" class="register-form" id="register-form">
+
+                        <form action="<?php echo base_url('/index.php/Web/Register/')?>" method="POST" class="register-form" id="register-form">
+
                         <div class="form-group">
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
@@ -85,8 +87,8 @@
                     <div class="signup-image">
 
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
-                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>                       
-    
+
+                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>   
 
                     </div>
                 </div>

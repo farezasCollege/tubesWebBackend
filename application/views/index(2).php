@@ -244,23 +244,23 @@
 			});
 		$("#li2").hover(function(){   
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/cream.jpg')");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/cream1.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li3").hover(function(){  
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/smoothing.jpg')");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/smoothing.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li4").hover(function(){   
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/spa1.jpg')","height":"100px","width":"180px"});
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/spa4.jpeg')","height":"100%","width":"100%"});
 			});	
 		$("#li5").hover(function(){   
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/ext2.jpg')");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ext7.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li6").hover(function(){  
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ombre.jpg')","height":"90%","width":"90%"});
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ombre.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li7").hover(function(){ 
 		        $("#nail").css("visibility","hidden");
