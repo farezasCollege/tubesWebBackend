@@ -13,7 +13,7 @@
 		function index(){
 			if ('role'=='customer') {
 				//$this->load->view(''); //redirect ke dashboard customer
-				echo "kontol";
+				echo "test";
 			}else{
 				$this->load->view('inputkodebooking'); //redirect ke homepage pegawai
 			}

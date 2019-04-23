@@ -182,11 +182,13 @@
 	</section>
 
 	<section id="about">
+
 		<h1 style="text-align: center;position: relative;top: -10px; font-size: 50px;">About us</h1>	
 				<h1 style="position: relative;top: 35%; text-align: center;font-size: 19px"><strong>Contact Us</strong></h1>
 					<p style="position: relative;top: 37%; font-size: 17px; text-align: center;"><strong>Email:</strong><a href="mailto: saloncitra@xxx.com"> saloncitra@xxx.com   |   </a><strong>Phone:</strong> 08512345678</p>
 					<p style="text-align: right;position: relative;bottom: 13%; font-size: 148%; font-family: Lucida Calligraphy">Salon Kami Adalah Salon Terpercaya Yang Karyawannya Ramah-Ramah. Bagi anda yang memimpikan menjadi seorang princess, silahkan datang dan coba pelayanan dari salon kami. Harga yang kami tawarkan sangat terjangkau untuk semua kalangan dan hasilnya tidak akan mengecewakan anda.</p>
 					<p style="text-align: center;position: relative;bottom: -110px; background-color: black; color: white">Copyright © 2019 saloncitra@xxx.com All Rights Reserved</p>
+
 	</section>
 	<script type="text/javascript">
 		 // auto-appear navbar on-scroll
@@ -223,23 +225,23 @@
 			});
 		$("#li2").hover(function(){   
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/cream.jpg')");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/cream1.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li3").hover(function(){  
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/smoothing.jpg')");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/smoothing.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li4").hover(function(){   
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/spa1.jpg')","height":"100px","width":"180px"});
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/spa4.jpeg')","height":"100%","width":"100%"});
 			});	
 		$("#li5").hover(function(){   
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css("background-image", "url('<?php echo base_url();?>/assets/services/ext2.jpg')");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ext7.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li6").hover(function(){  
 		        $("#nail").css("visibility","hidden");
-				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ombre.jpg')","height":"90%","width":"90%"});
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ombre.jpg')","height":"100%","width":"100%"});
 			});	
 		$("#li7").hover(function(){ 
 		        $("#nail").css("visibility","hidden");

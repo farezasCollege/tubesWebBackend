@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <link rel="stylesheet" href="<?php echo base_url ('/css/inputkodebooking.css')?>">
       <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-      <title>Salon Citra</title>
+      <title>Masukkan Kode Booking</title>
   </head>
   <body>
     <form action="<?php echo base_url('/index.php/inputkodebooking_c/cekkode/');?>" method="POST" class="search-box">
@@ -24,12 +24,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><?php foreach ($pemesanan as $pem) : ?>
+                    <tr><?php foreach ($kodee as $Pem) : ?>
                         <td class="text-center"><?= $Pem['username']; ?></td>
                         <td class="text-center"><?= $Pem['id_layanan']; ?></td>
                         <td class="text-center"><?= $Pem['status_bayar']; ?></td>
                         <td class="text-center"><?= $Pem['jam_pelayanan']; ?></td>
-						<td class="text-center"><?= $Pem['tanggal_pelayanan']; ?></td>
+					            	<td class="text-center"><?= $Pem['tanggal_pelayanan']; ?></td>
                         <td class="text-center">
                         </td>
                     </tr>

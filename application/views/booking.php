@@ -80,7 +80,7 @@
                 <div class="booking-image">
                     <div class="row">
 
-                        <img src="<?php echo base_url ('assets/img/wallpaper.png')?>" style="width: 100%; height: 850px">
+                        <img src="<?php echo base_url ('assets/img/wallpaper.png')?>" style="width: 90%; height: 850px;">
 
                         <!-- <div class="column">
                             <img src="creambath.jpg" style="width:100%">
@@ -108,12 +108,12 @@
                 </div>
 
                 <div class="booking-form">
-                <form action="<?php echo base_url('index.php/booking_controller/submit_pesan/'); ?>" method="POST" id="booking-form">
+                <form action="<?php echo base_url('/index.php/booking_controller/getView/'); ?>" method="POST" id="booking-form">
 
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
                         <div class="form-group form-input">
-                            <input type="text" name="nama" id="name" value="<?php echo $_SESSION['uname']; ?>" readonly/>
+                            <input type="text" name="nama" id="name" value="<?php echo $_SESSION['uname']; ?>" required/>
                             <label for="name" class="form-label">username</label>
                         </div>
                         <div class="form-group form-input">
@@ -168,10 +168,10 @@
                                 </select>
                             </div>
                         </div>
-
+                        <br>
                         <div class="form-submit">
-                            <input type="submit" class="submit" id="submit" name="submit" />
-                            <a href="#" class="vertify-booking"></a>
+                            <button type="submit" class="submit" id="submit" name="submit" >Book Now</button>
+                            <a href="<?php echo base_url('/index.php/Web/thankyou/') ?>" class="vertify-booking"></a>
                         </div>
                     </form>
                 </div>
