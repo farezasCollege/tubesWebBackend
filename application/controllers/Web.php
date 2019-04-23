@@ -11,6 +11,13 @@ class Web extends CI_Controller {
 		 $this->load->library('form_validation');
 
   	}
+
+  	public function thankyou()
+  	{
+  		$this->load->view(thankyou);
+  	}
+  	
+
 	public function index()
 	{
 		$data['judul'] = 'DaftarCustomer';

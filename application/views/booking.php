@@ -171,7 +171,7 @@
 
                         <div class="form-submit">
                             <input type="submit" class="submit" id="submit" name="submit" />
-                            <a href="#" class="vertify-booking"></a>
+                            <a href="<?php echo base_url('index.php/Web/thankyou') ?>" class="vertify-booking"></a>
                         </div>
                     </form>
                 </div>
