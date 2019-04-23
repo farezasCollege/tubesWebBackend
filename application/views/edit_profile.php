@@ -38,58 +38,70 @@
 						<li class="nav-item" style="cursor: pointer;">
 							<a href="<?php echo base_url('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
 						</li>
-					</ul>
-					
-				</nav>
-			</div>    
-     
-	<div class="contaner">
-		<div class="row justify-content-md-center">
-        <div class="card" style="width: 18rem;position: relative;top:150px">
-  			<div class="card-body">
-    			<h5 class="card-title" style="text-align: center;">Edit Profile</h5>
-    			<form action="" method="POST" class="edit-form" id="edit-form">
-    					<div class="row justify-content-md-center">
-                        	<div class="form-group">
-                                <input type="text" name="nama" id="name" placeholder="Full name" required/>
-                            </div>
-                            <div class="form-group"> 
-                                <label for="date"><i class="zmdi zmdi-calendar-alt" id='datetimepicker1'></i></label>
-                                <input type="text" name="date" id="name" placeholder="Date Of Birth" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="Username" id="name" placeholder="Username" readonly="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password" required/>
-                            </div>
-						</div>
-                            <div class="form-group form-button row justify-content-md-center" id="updatetmbl">
-                            	<button type="button" class="btn btn-info" href="<?php echo base_url('index.php/Web/Register'); ?>">Update</button>
-                            </div>
+                        <li class="nav-item dropdown" style="cursor: pointer;">
+                            <button type="button" class="btn dropdown-toggle", data-toggle="dropdown">Akun</button>
 
-                </form>
-  		</div>
-  	</div>
-  	</div>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" ><?php echo $_SESSION['nama'] ?></a>
+
+                                <!-- ini ke controller edit profile -->
+                                <a class="dropdown-item" href="<?php echo base_url('/index.php/Web/ubah/'); ?>">Edit profile</a> 
+
+                                <a class="dropdown-item" href="<?php echo base_url('/index.php/homepage/logout/'); ?>">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>    
+
+            <div class="contaner">
+              <div class="row justify-content-md-center">
+                <div class="card" style="width: 18rem;position: relative;top:150px">
+                   <div class="card-body">
+                     <h5 class="card-title" style="text-align: center;">Edit Profile</h5>
+                     <form action="<?php echo base_url('/index.php/Web/ubah/'); ?>" method="POST" class="edit-form" id="edit-form">
+                       <div class="row justify-content-md-center">
+                           <div class="form-group">
+                            <input type="text" name="nama" id="name" placeholder="Full name" value="<?php echo $_SESSION['nama']; ?>" required/>
+                        </div>
+                        <div class="form-group"> 
+                            <label for="date"><i class="zmdi zmdi-calendar-alt" id='datetimepicker1'></i></label>
+                            <input type="Date" name="date" id="name" placeholder="Date Of Birth" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" value="<?php echo $_SESSION['email']; ?>" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="Username" id="name" placeholder="Username" value="<?php echo $_SESSION['uname']; ?>" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password" required/>
+                        </div>
+                    </div>
+                    <div class="form-group form-button row justify-content-md-center" id="updatetmbl">
+                       <button type="submit" class="btn btn-info">Update</button>
+                   </div>
+
+               </form>
+           </div>
+       </div>
+   </div>
 </div>
 <div class="container">
     <?php if ($this->session->flashdata('flash')) : ?>
-    <div class="row mt-3">
-        <div class="col-md-6">
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong> Update Data Berhasil!</strong> <?= $this->session->flashdata('flash'); ?>.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong> Update Data Berhasil!</strong> <?= $this->session->flashdata('flash'); ?>.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
     <?php endif; ?>
 </body>

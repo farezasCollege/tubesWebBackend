@@ -38,7 +38,7 @@ class Web extends CI_Controller {
  
 		if($this->form_validation->run() != false){
 			$this->Salon->GetCustomer();
-			header("Location: ".base_url('/index.php/Register/'));
+			header("Location: ".base_url('/index.php/Web/Register/'));
 		}else{
 			$this->load->view('Register',$data);
 			$this->load->view('header');
@@ -78,10 +78,12 @@ class Web extends CI_Controller {
 
 	// }
 
-public function ubah($Username)
-{
+public function ubah()
+{ 
 	$data['judul'] = 'Edit';
-	$data['User'] = $this->Salon->GetCustumerUser($Username);
+	echo $_SESSION['uname']; echo "<br>";
+	$data['User'] = $this->Salon->GetCustumerUser($_SESSION['uname']);
+	print_r($data['User']->result_array());
 	$this->form_validation->set_rules('nama','Nama','required');
 	$this->form_validation->set_rules('date','Date','required');
 	$this->form_validation->set_rules('email','Email','required');
@@ -89,10 +91,28 @@ public function ubah($Username)
 	$this->form_validation->set_rules('pass','Password');
 
 	if($this->form_validation->run()==false){	
-		$this->load->view('', $data);
 		$this->load->view('edit_profile');
+		//$this->load->view('edit_profile');
 	} else{
-		$this->Salon->UbahDataCustomer();
+		$data = array (
+			'Nama' => $this->input->post('nama'),
+			'tgl' => $this->input->post('date'),
+			'Email' => $this->input->post('email'),
+			'Password' => $this->input->post('pass'),
+			'Role' => 'customer'
+		);
+
+		$data_session = array(
+				'uname' => $_SESSION['uname'],
+				'nama' => $data['Nama'],
+				'email' => $data['Email'],
+				'status' => "login",
+				'role' => $_SESSION['role']
+			);
+
+		$this->session->set_userdata($data_session);
+
+		$this->Salon->UbahDataCustomer($data,$_SESSION['uname']); 
 		$this->load->view('edit_profile');
 	}
 }
@@ -123,9 +143,9 @@ public function RegisterPeg()
 }
    public function search()
   {
-  if ($this->input->post('kode')) {
-	$data['pemesanan'] = $this->Salon->cariDatabooking();
+  	if ($this->input->post('kode')) {
+		$data['pemesanan'] = $this->Salon->cariDatabooking();
 	}
-	$this->load->view('inputkodebooking');
-}
+		$this->load->view('inputkodebooking');
+	}
 }

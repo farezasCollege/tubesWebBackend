@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="booking-form">
-                <form action="<?php echo base_url('index.php/booking_controller/submit_pesan/'); ?>" method="POST" id="booking-form">
+                <form action="<?php echo base_url('index.php/booking_controller/getView/'); ?>" method="POST" id="booking-form">
 
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
