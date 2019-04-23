@@ -38,14 +38,14 @@ class homepage extends CI_Controller
 			// browsing cara retrieve session data
 
 			if ($q[0]['Role']=='customer') {
-				redirect(base_url('/index.php/homepage/homepage_cust/')); //redirect ke dashboard customer
-				//echo "customer";
+				redirect(base_url('/index.php/homepage/homepage_cust/')); 
 			}else{
-				//redirect(base_url(''));  redirect ke homepage pegawai
+				////tampilkan login gagal di view
 				echo "tidak bisa masuk lewat sini";
 			}
 
 		}else{
+			//tampilkan login gagal di view
 			$this->session->set_flashdata("confirm","gagal");
 			echo "gagal";
 		}
@@ -61,8 +61,5 @@ class homepage extends CI_Controller
 		redirect(base_url());
 	}
 
-    function data() {
-		$this->load->view('done_login');
-	}
 }
 ?>

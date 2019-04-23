@@ -20,7 +20,7 @@
 			$dbase=$this->login_pg->get_pg($un,$pass);
 
 			if($un=="manager" && $pass=="manager123"){
-				//redirect(base_url('/index.php/  ')); //redirect ke dashboard manager
+				redirect(base_url('/index.php/Web/view/ ')); //redirect ke dashboard manager
 
 			}else if($dbase->num_rows()>0){
 				$akun=$dbase->result_array();
@@ -35,12 +35,14 @@
 				$this->session->set_userdata($peg_session);
 
 				if($akun[0]['Role']=="pegawai"){
-					//redirect(base_url('/index.php/  ')) //redirect ke page pegawai
+					redirect(base_url('/index.php/inputkodebooking_c/')) //redirect ke page pegawai
 					echo "masuk";
 				}else{
+					//tampilkan login gagal di view
 					echo "anda tidak bisa login disini";
 				}
 			}else{
+				//tampilkan login gagal di view
 				echo "maaf username atau password salah";
 			}
 		}

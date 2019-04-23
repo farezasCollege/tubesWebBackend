@@ -26,7 +26,7 @@
           <input type="password" name="pass" class="form-control" placeholder="Masukkan password">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+        <button type="submit" class="btn btn-primary btn-block" href="<?php echo base_url('index.php/Web/view/');?>">Masuk</button>
       </form>
     </div>
 
