@@ -21,8 +21,8 @@
 		public function getDatabooking()
 		{
 			$data['judul'] = 'DaftarPemesanan';
-			$data['pemesanan'] = $this->jasaPemesanan_model->getPemesanan();
-			$this->load->view('daftar_pemesanan', $data);
+			$data['pemesanan'] = $this->jasaPemesanan_model->getPemesanan()->result_array();
+			$this->load->view('daftar_pemesanan', $data['pemesanan']);
 		}
 }
 

@@ -41,7 +41,6 @@
                         <th class="text-center" scope="col">EMAIL</th>
                         <th class="text-center" scope="col">USERNAME</th>
                         <th class="text-center" scope="col">ROLE</th>
-						<th class="text-center" scope="col">AKSI</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,7 +51,6 @@
                         <td class="text-center"><?= $cus['Username']; ?></td>
 						<td class="text-center"><?= $cus['Role']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url();?>Web/ubah/<?= $cus['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>

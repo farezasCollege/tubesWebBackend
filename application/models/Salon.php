@@ -20,7 +20,7 @@ class Salon extends CI_Model {
 			'Email' => $_POST['email'],
 			'Username' => $_POST['Username'],
 			'Password' => md5($_POST['pass']),
-      		'Role' => 'customer'
+      'Role' => 'customer'
 	    );
 		$this->db->insert('user',$arrData);
 	}
@@ -28,22 +28,22 @@ class Salon extends CI_Model {
 
 	public function GetCustumerUser($Username)
 	{
-		// $this->db->where('Username', $Username);
-		// return $this->db->get('user')->result_array();
-		return $this->db->query("select * from user where Username='$Username'");
+		$this->db->where('Username', $Username);
+		return $this->db->get('user')->row_array();
 	}
 
-	public function UbahDataCustomer($arrayCust,$uname)
+	public function UbahDataCustomer()
 	{
+		$data = array (
+			'Nama' => $this->input->post('nama', true),
+			'Date' => $this->input->post('date', true),
+			'Email' => $this->input->post('email', true),
+			'Password' => $this->input->post('pass', true),
+			'Role' => 'customer'
+		);
 		//use query builder class to update data mahasiswa based on id
-		$namaa=$arrayCust['Nama'];
-		$tgl=$arrayCust['tgl'];
-		$emaill=$arrayCust['Email'];
-		$pass=md5($arrayCust['Password']);
-
-		$this->db->query("UPDATE user SET Nama='$namaa', Date='$tgl',Email='$emaill',Password='$pass' WHERE Username='$uname'");
-		// $this->db->where('Username',$uname);
-		// $this->db->update('user',$arrayCust);
+		$this->db->where('Username',$Username);
+		$this->db->update('user',$data);
 	}
 
 	public function GetAllPegawai()
@@ -86,4 +86,11 @@ public function cariDatabooking()
 
 	//return data mahasiswa that has been searched
 }
+
+
+	public function hapusDataPegawai($Username)
+	{
+		$this->db->where('Username',$Username);
+		return $this->db->delete('user');
+	}
 }

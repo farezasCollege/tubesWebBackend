@@ -52,7 +52,7 @@
                         <td class="text-center"><?= $Peg['Username']; ?></td>
 						<td class="text-center"><?= $Peg['Role']; ?></td>
                         <td class="text-center">
-                            <a href="<?= base_url();?>Web/ubah/<?= $Peg['Username'] ?>" class="badge badge-success float-center" ?>ubah</a>
+						<a href="<?= base_url(); ?>Web/hapus/<?= $Peg['Username'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
                         </td>
                     </tr>
                     <?php endforeach ?>
