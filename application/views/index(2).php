@@ -185,16 +185,16 @@
 		<h1>About us</h1>
 		<div class="row">
 			<div class="container">
-				<p>haha</p>		
+				<br>	
 			</div>
 
 		</div>
 		<div class="row">
 			<div class="container col-4 kontak">
-				<h4>Contact us</h4>
+				<h4>Kontak kami</h4>
 				<div class="row email">
 					<img class="row" src="">
-					<p class="row">saloncitra@xxx.com</p>
+					<p class="row">saloncitra@gmail.com</p>
 				</div>
 				<div class="row phone">
 					<img class="row" src="">
