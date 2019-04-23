@@ -13,19 +13,32 @@ class booking_controller extends CI_Controller
 	}
 
 	function getView(){
+		$this->load->model('book');
+		// $this->book->cekduplikat($kode_booking);
 		$jasa=$_POST['service'];
 		$id=$this->db->query("select id_layanan from jenis_jasa where nama_jasa='$jasa'")->result_array();
 		
-		$arrData = array(
-			'kode_booking' => "psn-".rand(10,99),
-			'username' => $_SESSION['uname'],
-			'id_layanan' => $id[0]['id_layanan'],
-			'tanggal_pelayanan' => $_POST['tgl'],
-			'jam_pelayanan' => $_POST['jam'],
-			'status_bayar' => false
-		);
+		$kode_booking = "psn-".rand(0,99);
+		$kobook = $this->book->cekduplikat($kode_booking);
 
-		$this->submit_pesan($arrData);
+		if($kobook->num_rows()>0)
+		{
+			echo "error";
+		} else {
+			echo "bisa";
+		// 	$arrData = array(
+			
+		// 	'username' => $_SESSION['uname'],
+		// 	'id_layanan' => $id[0]['id_layanan'],
+		// 	'tanggal_pelayanan' => $_POST['tgl'],
+		// 	'jam_pelayanan' => $_POST['jam'],
+		// 	'status_bayar' => false
+		// );
+
+		// $this->submit_pesan($arrData);
+		}
+
+		
 	}
 
 	function submit_pesan($arr_data){

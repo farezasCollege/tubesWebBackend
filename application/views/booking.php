@@ -76,11 +76,22 @@
     <div class="main">
 
         <div class="container">
-            <div class="booking-content">
-                <div class="booking-image">
-                    <div class="row">
 
-                        <img src="<?php echo base_url ('assets/img/wallpaper.png')?>" style="width: 90%; height: 850px;">
+            <!-- <?php if ($this->session->flashdata('flash')) : ?>
+                
+        <?php endif;?> -->
+
+                <div class="booking-content">
+
+                    <!-- Account has already exist <strong>Berhasil</strong> <?php echo $this->session->flashdata('flash') ; ?> -->
+
+
+
+                    <div class="booking-image">
+                        <div class="row">
+
+
+                            <img src="<?php echo base_url ('assets/img/wallpaper.png')?>" style="width: 90%; height: 850px;">
 
                         <!-- <div class="column">
                             <img src="creambath.jpg" style="width:100%">
@@ -108,7 +119,7 @@
                 </div>
 
                 <div class="booking-form">
-                <form action="<?php echo base_url('/index.php/booking_controller/getView/'); ?>" method="POST" id="booking-form">
+                    <form action="<?php echo base_url('/index.php/booking_controller/getView/'); ?>" method="POST" id="booking-form">
 
                         <h2>Booking for Service</h2>
                         <h3>Customer Profile</h3>
@@ -175,8 +186,11 @@
                         </div>
                     </form>
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
 </div>
