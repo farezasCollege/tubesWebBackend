@@ -12,9 +12,9 @@
 
 </head>
 <body>
-	<nav class="col-4">
+	<!-- <nav class="col-4">
 		<a class="logo" href="#">
-			<!-- navbar branding -->
+			<!-- navbar branding 
 			<img src="<?php echo base_url();?>assets/branding.png">
 		</a>
 
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 	</nav>
- 
+  -->
 	<table class="container content table mt-6 col-8">
                 <thead>
                     <tr>

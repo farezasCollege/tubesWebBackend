@@ -182,32 +182,13 @@
 	</section>
 
 	<section id="about">
-		<h1>About us</h1>
-		<div class="row">
-			<div class="container">
-				<p>haha</p>		
-			</div>
 
-		</div>
-		<div class="row">
-			<div class="container col-4 kontak">
-				<h4>Contact us</h4>
-				<div class="row email">
-					<img class="row" src="">
-					<p class="row">saloncitra@xxx.com</p>
-				</div>
-				<div class="row phone">
-					<img class="row" src="">
-					<p class="row">08512345678</p>
-				</div>
-			</div>
-			<div class="container col-4 profil-salon">
-				<h4>Profil salon</h4>
-				<div class="row">
-					<p>salon kami adalah salon terpercaya yang karyawannya ramah-ramah. Selain itu, kami juga menawarkan jasa yang endeus abiss</p>
-				</div>
-			</div>
-		</div>
+		<h1 style="text-align: center;position: relative;top: -10px; font-size: 50px;">About us</h1>	
+				<h1 style="position: relative;top: 35%; text-align: center;font-size: 19px"><strong>Contact Us</strong></h1>
+					<p style="position: relative;top: 37%; font-size: 17px; text-align: center;"><strong>Email:</strong><a href="mailto: saloncitra@xxx.com"> saloncitra@xxx.com   |   </a><strong>Phone:</strong> 08512345678</p>
+					<p style="text-align: right;position: relative;bottom: 13%; font-size: 148%; font-family: Lucida Calligraphy">Salon Kami Adalah Salon Terpercaya Yang Karyawannya Ramah-Ramah. Bagi anda yang memimpikan menjadi seorang princess, silahkan datang dan coba pelayanan dari salon kami. Harga yang kami tawarkan sangat terjangkau untuk semua kalangan dan hasilnya tidak akan mengecewakan anda.</p>
+					<p style="text-align: center;position: relative;bottom: -110px; background-color: black; color: white">Copyright © 2019 saloncitra@xxx.com All Rights Reserved</p>
+
 	</section>
 	<script type="text/javascript">
 		 // auto-appear navbar on-scroll

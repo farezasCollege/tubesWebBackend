@@ -13,31 +13,44 @@ class booking_controller extends CI_Controller
 	}
 
 	function getView(){
+		$this->load->model('book');
+		// $this->book->cekduplikat($kode_booking);
 		$jasa=$_POST['service'];
 		$id=$this->db->query("select id_layanan from jenis_jasa where nama_jasa='$jasa'")->result_array();
 		
-		$arrData = array(
-			'kode_booking' => "psn-".rand(10,99),
-			'username' => $_SESSION['uname'],
-			'id_layanan' => $id[0]['id_layanan'],
-			'tanggal_pelayanan' => $_POST['tgl'],
-			'jam_pelayanan' => $_POST['jam'],
-			'status_bayar' => false
-		);
+		$kode_booking = "psn-".rand(0,99);
+		$kobook = $this->book->cekduplikat($kode_booking);
 
-		$this->submit_pesan($arrData);
+		if($kobook->num_rows()>0)
+		{
+			echo "error";
+		} else {
+			echo "bisa";
+		// 	$arrData = array(
+			
+		// 	'username' => $_SESSION['uname'],
+		// 	'id_layanan' => $id[0]['id_layanan'],
+		// 	'tanggal_pelayanan' => $_POST['tgl'],
+		// 	'jam_pelayanan' => $_POST['jam'],
+		// 	'status_bayar' => false
+		// );
+
+		// $this->submit_pesan($arrData);
+		}
+
+		
 	}
 
 	function submit_pesan($arr_data){
 		$mail=$_SESSION['email'];
 		$kode=$arr_data['kode_booking'];
 
-		$this->book->Getbooking(getView());
+		$this->book->Getbooking($arr_data);
 		//$this->kirim($mail,$kode);
 
 		header("Location:".base_url('/index.php/Web/thankyou/'));
 
-		header("refresh:5;Location: ".base_url('/index.php/booking_controller/'));
+		//header("Location: ".base_url('/index.php/booking_controller/'));
 	}
 
 	function kirim(){ //$email_user,$kode_booking 
