@@ -15,10 +15,6 @@ class booking_controller extends CI_Controller
 	function getView(){
 		$jasa=$_POST['service'];
 		$id=$this->db->query("select id_layanan from jenis_jasa where nama_jasa='$jasa'")->result_array();
-
-			// print_r($id);
-			// echo "<br>";
-			// echo $id[0]['id_layanan'];
 		
 		$arrData = array(
 			'kode_booking' => "psn-".rand(10,99),
@@ -33,24 +29,18 @@ class booking_controller extends CI_Controller
 	}
 
 	function submit_pesan($arr_data){
-			//print_r($_POST);
-			// echo "<br>";
-			// echo $_POST['service'];
-
-		
-
-			 //print_r($arrData);
-
 		$mail=$_SESSION['email'];
 		$kode=$arr_data['kode_booking'];
 
-		//w$this->book->Getbooking(getView());
-		$this->kirim($mail,$kode);
+		$this->book->Getbooking(getView());
+		//$this->kirim($mail,$kode);
 
-		//header("Location: ".base_url('/index.php/booking_controller/'));
+		header("Location:".base_url('/index.php/Web/thankyou/'));
+
+		header("refresh:5;Location: ".base_url('/index.php/booking_controller/'));
 	}
 
-	function kirim(){ //$email_user,$kode_booking
+	function kirim($email_user,$kode_booking){ 
 		$this->load->library('Email');
 		$this->load->library('encrypt');
 		$config = array(
@@ -58,8 +48,8 @@ class booking_controller extends CI_Controller
     		'smtp_host' => 'smtp.gmail.com',
     		// 'smtp_crypto' => 'ssl',
     		'smtp_port' => 465,
-    		'smtp_user' => 'loig.fried',
-    		'smtp_pass' => 'siegfried1122',
+    		'smtp_user' => '',
+    		'smtp_pass' => '',
     		'mailtype'  => 'html',
     		'charset'   => 'utf-8',
     		'crlf' => "\r\n"
