@@ -14,7 +14,7 @@ class Web extends CI_Controller {
 
   	public function thankyou()
   	{
-  		$this->load->view(thankyou);
+  		$this->load->view('thankyou');
   	}
   	
 
