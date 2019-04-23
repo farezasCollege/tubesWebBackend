@@ -87,8 +87,7 @@
                     <div class="signup-image">
 
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
-
-                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>   
+                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>  
 
                     </div>
                 </div>
