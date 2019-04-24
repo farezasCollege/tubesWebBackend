@@ -45,7 +45,7 @@
 
 						<!-- ini ke controller edit profile -->
 						<a class="dropdown-item" href="<?php echo base_url('/index.php/Web/ubah/'); ?>">Edit profile</a> 
-						<a class="dropdown-item" href="<?php echo base_url();?>Web/hapus/<?=$customer['Username']?>"onclick="return confirm('Apakah anda yakin menghapus data ini?');"?>Delete account</a>
+						<a class="dropdown-item" href="<?php echo base_url();?>" >Delete account</a>
 						<a class="dropdown-item" href="<?php echo base_url('/index.php/homepage/logout/'); ?>">Logout</a>
 					</div>
 
@@ -119,10 +119,10 @@
 		<div class="modal fade" id="login-form" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
-				<div class="modal-content" style="border-radius: 14px !important;">
+				<div class="modal-content" style="border-radius: 25px !important;">
 					<div class="container-login">
-						<h3 >LOGIN</h3>
-						<form action="" method="POST">
+						<h3>LOGIN</h3>
+						<form action="<?php echo base_url('index.php/homepage/login_action/');?>" method="POST">
 							<div class="form-group">
 
 								<label>username</label>
@@ -131,78 +131,73 @@
 								<label>password</label>						
 								<input id="pass" class="input-pass" placeholder="password" name="pass-input" type="password" required>
 
-								<button type="submit" class="btn btn-primary">Login</button>
-								<a href="#forgot">Forgot Password?</a>
+								<button type="submit" class="btn btn-primary tombollogin">Login</button>
+								<a class="forgotpass"  href="#forgot">Forgot Password?</a>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end of login --> 
-		<script type="text/javascript">
-			$("#login-butt").click(function(){
+	</div>
+	<!-- end of login --> 
+</section>
 
-			});
-		</script>
-	</section>
-
-	<section id="service">
-		<h1>Our Services</h1>
-		<div class="row container list-jasa">
-			<div class="container col-4">
-				<ul>
-					<li>
-						Potong rambut
-						<span style="margin-left: 40%;">Rp.50.000,-</span>
-					</li>
-					<li>
-						Potong kuku
-						<span style="margin-left: 45%;">Rp.20.000,-</span>
-					</li>
-					<li>
-						Potong kambing
-						<span style="margin-left: 30%;">Rp.1.050.000,-</span>
-					</li>
-					<li>
-						Potong bebek angsa
-						<span style="margin-left: 24%;">Rp.550.000,-</span>
-					</li>
-				</ul>
+<section id="service">
+	<h1>Our Services</h1>
+	<div class="row container list-jasa">
+		<div class="container col-4">
+			<ul>
+				<li id="li1">
+					Nail Art
+					<span style="margin-left: 50%;">Rp.200.000,-</span>
+				</li>
+				<li id="li2">
+					Creambath
+					<span style="margin-left: 43%;">Rp.100.000,-</span>
+				</li>
+				<li id="li3">
+					Smoothing
+					<span style="margin-left: 43%;">Rp.200.000,-</span>
+				</li>
+				<li id="li4">
+					Spa
+					<span style="margin-left: 58%;">Rp.300.000,-</span>
+				</li>
+				<li id="li5">
+					Hair Extension
+					<span style="margin-left: 35%;">Rp.700.000,-</span>
+				</li>
+				<li id="li6">
+					Hair Coloring
+					<span style="margin-left: 37%;">Rp.800.000,-</span>
+				</li>
+				<li id="li7">
+					Hair Cut
+					<span style="margin-left: 47%;">Rp.150.000,-</span>
+				</li>
+			</ul>
+		</div>
+		<div class="container col-6">
+			<div class="container" id="conimg">
+					<img src="<?php echo base_url();?>/assets/services/nail.jpg" height="100%" width="100%" id="nail">
 			</div>
-			<div class="container col-6">
+		</div>
+	</div>
+</section>
 
 			</div>
 		</div>
 	</section>
 
 	<section id="about">
-		<h1>About us</h1>
-		<div class="row">
-			<div class="container">
-				<p>haha</p>		
-			</div>
 
-		</div>
-		<div class="row">
-			<div class="container col-4 kontak">
-				<h4>Contact us</h4>
-				<div class="row email">
-					<img class="row" src="">
-					<p class="row">saloncitra@xxx.com</p>
-				</div>
-				<div class="row phone">
-					<img class="row" src="">
-					<p class="row">08512345678</p>
-				</div>
-			</div>
-			<div class="container col-4 profil-salon">
-				<h4>Profil salon</h4>
-				<div class="row">
-					<p>salon kami adalah salon terpercaya yang karyawannya ramah-ramah. Selain itu, kami juga menawarkan jasa yang endeus abiss</p>
-				</div>
-			</div>
-		</div>
+		<h1 style="text-align: center;position: relative;top: -10px; font-size: 50px;">About us</h1>	
+				<h1 style="position: relative;top: 35%; text-align: center;font-size: 19px"><strong>Contact Us</strong></h1>
+					<p style="position: relative;top: 37%; font-size: 17px; text-align: center;"><strong>Email:</strong><a href="mailto: saloncitra@xxx.com"> saloncitra@xxx.com   |   </a><strong>Phone:</strong> 08512345678</p>
+					<p style="text-align: right;position: relative;bottom: 13%; font-size: 148%; font-family: Lucida Calligraphy">Salon Kami Adalah Salon Terpercaya Yang Karyawannya Ramah-Ramah. Bagi anda yang memimpikan menjadi seorang princess, silahkan datang dan coba pelayanan dari salon kami. Harga yang kami tawarkan sangat terjangkau untuk semua kalangan dan hasilnya tidak akan mengecewakan anda.</p>
+					<p style="text-align: center;position: relative;bottom: -110px; background-color: black; color: white">Copyright © 2019 saloncitra@xxx.com All Rights Reserved</p>
+
 	</section>
 	<script type="text/javascript">
 		 // auto-appear navbar on-scroll
@@ -224,18 +219,43 @@
 
 				if (this.hash !== "") {
 					event.preventDefault();
-
 					var hash = this.hash;
-
 					$('html, body, section').animate({
 						scrollTop: $(hash).offset().top
 					}, 800, function(){
-
 						window.location.hash = hash;
 					});
 				}
 			});
 		});
+
+		$("#li1").hover(function(){ 
+		      	$("#nail").css("visibility","visible");
+			});
+		$("#li2").hover(function(){   
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/cream1.jpg')","height":"100%","width":"100%","background-repeat":"no-repeat"});
+			});	
+		$("#li3").hover(function(){  
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/smoothing.jpg')","height":"100%","width":"100%","background-repeat":"no-repeat"});
+			});	
+		$("#li4").hover(function(){   
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/spa4.jpeg')","height":"100%","width":"100%","background-repeat":"no-repeat"});
+			});	
+		$("#li5").hover(function(){   
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ext7.jpg')","height":"100%","width":"100%","background-repeat":"no-repeat"});
+			});	
+		$("#li6").hover(function(){  
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/ombre.jpg')","height":"100%","width":"100%","background-repeat":"no-repeat"});
+			});	
+		$("#li7").hover(function(){ 
+		        $("#nail").css("visibility","hidden");
+				$("#conimg").css({"background-image":"url('<?php echo base_url();?>/assets/services/cut.jpg')","height":"100%","width":"100%","background-repeat":"no-repeat"});
+			});						
 	</script>
 </body>
 </html>

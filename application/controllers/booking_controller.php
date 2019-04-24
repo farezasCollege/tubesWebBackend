@@ -26,58 +26,55 @@ class booking_controller extends CI_Controller
 			echo "error";
 		} else {
 			echo "bisa";
-		// 	$arrData = array(
-			
-		// 	'username' => $_SESSION['uname'],
-		// 	'id_layanan' => $id[0]['id_layanan'],
-		// 	'tanggal_pelayanan' => $_POST['tgl'],
-		// 	'jam_pelayanan' => $_POST['jam'],
-		// 	'status_bayar' => false
-		// );
+			$arrData = array(
+				'kode_booking' => $kode_booking,
+				'username' => $_SESSION['uname'],
+				'id_layanan' => $id[0]['id_layanan'],
+				'tanggal_pelayanan' => $_POST['tgl'],
+				'jam_pelayanan' => $_POST['jam'],
+				'status_bayar' => false
+			);
 
-		// $this->submit_pesan($arrData);
+			$this->submit_pesan($arrData);
 		}
 
 		
 	}
 
 	function submit_pesan($arr_data){
-		$mail=$_SESSION['email'];
 		$kode=$arr_data['kode_booking'];
 
+
 		$this->book->Getbooking($arr_data);
-		//$this->kirim($mail,$kode);
+		$this->kirim($arr_data,$mail);
 
 		header("Location:".base_url('/index.php/Web/thankyou/'));
 
 		//header("Location: ".base_url('/index.php/booking_controller/'));
 	}
 
-	function kirim(){ //$email_user,$kode_booking 
+	function kirim($data){ 
 		$this->load->library('email');
-		// $this->load->library('encrypt');
-		$config = array(
-    		'protocol'  => 'smtp',
-    		'smtp_host' => 'smtp.gmail.com',
-    		// 'smtp_crypto' => 'ssl',
-    		'smtp_ssl' =>'auto',
-    		'smtp_port' => 587,
-    		'smtp_user' => 'loig.fried',
-    		'smtp_pass' => 'siegfried1122',
-    		'mailtype'  => 'html',
-    		'charset'   => 'utf-8',
-    		'crlf' => "\r\n"
-		);
-		$this->email->initialize($config);
-		$this->email->set_newline("\r\n");
+        $config['protocol']    = 'smtp';
+        $config['smtp_host']    = 'smtp.gmail.com';
+        $config['smtp_port']    = '587';
+        $config['smtp_timeout'] = '7';
+        $config['smtp_user']    = 'loig.fried@gmail.com';
+        $config['smtp_pass']    = 'siegfried1122';
+        $config['charset']    = 'utf-8';
+        $config['newline']    = "\r\n";
+        $config['mailtype'] = 'html'; // or html
+        $config['validation'] = TRUE; // bool whether to validate email or not 
+        $this->email->initialize($config);
 
-		$this->email->from('loig.fried@gmail.com','admin');
-		$this->email->to('fareza087@gmail.com');
+        $this->email->set_newline("\r\n");
+		$this->email->from('loig.fried@gmail.com','Pemesanan');
+		$this->email->to($_SESSION['email']);
 		$this->email->subject('Kode Booking Salon Citra');
-		$this->email->message("tes email");
+		$this->email->message($this->message($data));
 		$this->email->set_newline("\r\n");
 
-		$this->email->send();
+		//$this->email->send();
 
 		if($this->email->send()) 
 		{//$this->session->set_flashdata("email_sent","Email sent successfully.");
@@ -85,10 +82,13 @@ class booking_controller extends CI_Controller
 		} 
 		else 
 		{//$this->session->set_flashdata("email_sent","Error in sending Email.");
-			echo "not sent";
-			echo "<br>";
+			echo "not sent <br>";
 			show_error($this->email->print_debugger());
 		} 
+	}
+
+	function message($data){
+		$this->load->view('message',$data);
 	}
 }
 ?>

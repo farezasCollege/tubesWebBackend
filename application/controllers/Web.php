@@ -29,6 +29,10 @@ class Web extends CI_Controller {
 		$this->load->view('booking');
 	}
 
+	public function thankyou(){
+		$this->load->view('thankyou');
+	}
+
 	public function Register()
 	{
 		$data['judul'] = 'Form Register';		
@@ -50,36 +54,6 @@ class Web extends CI_Controller {
 
 
 	}
-	
-	// public function Book()
-	// {
-	// 	// ("name-view","field-tabel database","required html")
-	// 	//Load page_header and page_index from views
-	// 	$username=$this->db->query("select username from user where Nama='$_POST['nama']'");
-	// 	$id=$this->db->query("select id_layanan from jenis_jasa where nama_jasa='$_POST['service']'");
-
-	// 	// $data['judul'] = 'Formbooking';		
-	// 	// $this->form_validation->set_rules('nama','Nama','required');
-	// 	// $this->form_validation->set_rules('email','Email','required');
-	// 	// $this->form_validation->set_rules('phone','Phone','required');
-	// 	// $this->form_validation->set_rules('gender','Gender','required');
-	// 	// $this->form_validation->set_rules('ktp','KTP');
-	// 	// $this->form_validation->set_rules('birth','Date');
-	// 	// $this->form_validation->set_rules('tgl','Bdate');
-	// 	// $this->form_validation->set_rules('time','Time');
-	// 	// $this->form_validation->set_rules('service','Service');
-
-	// 	// if($this->form_validation->run() != false){
-	// 	// 	$this->Salon->Getbooking();
-	// 	// }else{
-	// 	// $this->load->view('booking',$data);
-	// 	// $this->load->view('header');
-	// 	// $this->load->view('footer');
-	// 	// }
-
-
-
-	// }
 
 	public function ubah()
 	{ 
@@ -155,6 +129,6 @@ class Web extends CI_Controller {
 	public function hapus($Username)
 	{
 		$hapus=$this->Salon->hapusDataPegawai($Username);
-		redirect('Web/view/');
+		redirect(base_url('/index.php/Web/view/'));
 	}
 }
