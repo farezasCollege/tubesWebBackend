@@ -84,9 +84,10 @@ class Web extends CI_Controller {
 	public function ubah()
 	{ 
 		$data['judul'] = 'Edit';
-		echo $_SESSION['uname']; echo "<br>";
+		//echo $_SESSION['uname']; echo "<br>";
 		$data['User'] = $this->Salon->GetCustumerUser($_SESSION['uname']);
-		print_r($data['User']->result_array());
+		//print_r($data['User']->result_array());
+
 		$this->form_validation->set_rules('nama','Nama','required');
 		$this->form_validation->set_rules('date','Date','required');
 		$this->form_validation->set_rules('email','Email','required');

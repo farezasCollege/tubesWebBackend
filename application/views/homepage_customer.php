@@ -44,8 +44,7 @@
 						<a class="dropdown-item" ><?php echo $_SESSION['nama'] ?></a>
 
 						<!-- ini ke controller edit profile -->
-						<a class="dropdown-item" href="<?php echo base_url('/index.php/Web/ubah/'); ?>">Edit profile</a> 
-						<a class="dropdown-item" href="<?php echo base_url();?>Web/hapus/<?=$customer['Username']?>"onclick="return confirm('Apakah anda yakin menghapus data ini?');"?>Delete account</a>
+						<a class="dropdown-item" href="<?php echo base_url('/index.php/Web/ubah/'); ?>">Edit profile</a>
 						<a class="dropdown-item" href="<?php echo base_url('/index.php/homepage/logout/'); ?>">Logout</a>
 					</div>
 
