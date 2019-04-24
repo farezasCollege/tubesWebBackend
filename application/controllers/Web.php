@@ -29,6 +29,11 @@ class Web extends CI_Controller {
 		$this->load->view('booking');
 	}
 
+	public function thankyou()
+	{
+		$this->load->view('thankyou');
+	}
+
 	public function Register()
 	{
 		$data['judul'] = 'Form Register';		
