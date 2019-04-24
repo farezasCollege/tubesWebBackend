@@ -46,8 +46,9 @@ class homepage extends CI_Controller
 
 		}else{
 			//tampilkan login gagal di view
-			$this->session->set_flashdata("confirm","gagal");
-			echo "gagal";
+			$this->session->set_flashdata("alert","gagal login");
+			redirect(base_url());
+			//echo "gagal";
 		}
 	}
 
