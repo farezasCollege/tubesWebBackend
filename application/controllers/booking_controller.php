@@ -53,16 +53,17 @@ class booking_controller extends CI_Controller
 		//header("Location: ".base_url('/index.php/booking_controller/'));
 	}
 
-	function kirim($email_user,$kode_booking){ 
-		$this->load->library('Email');
-		$this->load->library('encrypt');
+	function kirim(){ //$email_user,$kode_booking 
+		$this->load->library('email');
+		// $this->load->library('encrypt');
 		$config = array(
     		'protocol'  => 'smtp',
     		'smtp_host' => 'smtp.gmail.com',
     		// 'smtp_crypto' => 'ssl',
-    		'smtp_port' => 465,
-    		'smtp_user' => '',
-    		'smtp_pass' => '',
+    		'smtp_ssl' =>'auto',
+    		'smtp_port' => 587,
+    		'smtp_user' => 'loig.fried',
+    		'smtp_pass' => 'siegfried1122',
     		'mailtype'  => 'html',
     		'charset'   => 'utf-8',
     		'crlf' => "\r\n"
