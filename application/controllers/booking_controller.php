@@ -59,8 +59,8 @@ class booking_controller extends CI_Controller
         $config['smtp_host']    = 'smtp.gmail.com';
         $config['smtp_port']    = '587';
         $config['smtp_timeout'] = '7';
-        $config['smtp_user']    = 'loig.fried@gmail.com';
-        $config['smtp_pass']    = 'siegfried1122';
+        $config['smtp_user']    = '';
+        $config['smtp_pass']    = '';
         $config['charset']    = 'utf-8';
         $config['newline']    = "\r\n";
         $config['mailtype'] = 'html'; // or html
