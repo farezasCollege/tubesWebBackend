@@ -12,11 +12,18 @@ class Web extends CI_Controller {
 
 	}
 
-	public function index()
+	public function index() //lihat customer
 	{
 		$data['judul'] = 'DaftarCustomer';
 		$data['customer'] = $this->Salon->GetAllCustomer();
 		$this->load->view('daftar_customer', $data);
+	}
+
+	public function index2() //lihat tabel pegawai dari manager
+	{
+		$data['judul'] = 'DaftarPegawai';
+		$data['Pegawai'] = $this->Salon->GetAllPegawai();
+		$this->load->view('daftar_pegawai', $data);
 	}
 
 	public function view()
@@ -94,13 +101,6 @@ class Web extends CI_Controller {
 			$this->Salon->UbahDataCustomer($data,$_SESSION['uname']); 
 			$this->load->view('edit_profile');
 		}
-	}
-
-	public function index2()
-	{
-		$data['judul'] = 'DaftarPegawai';
-		$data['Pegawai'] = $this->Salon->GetAllPegawai();
-		$this->load->view('daftar_pegawai', $data);
 	}
 
 	public function RegisterPeg()

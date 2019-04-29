@@ -15,16 +15,11 @@
 
 		public function index()
 		{
-			$this->load->view('daftar_pemesanan');
-		}
-
-		public function getDatabooking()
-		{
 			$data['judul'] = 'DaftarPemesanan';
-			$data['pemesanan'] = $this->jasaPemesanan_model->getPemesanan()->result_array();
-			$this->load->view('daftar_pemesanan', $data['pemesanan']);
+			$data['pemesanan'] = $this->jasaPemesanan_model->getPemesanan()->result();
+			// print_r($data['pemesanan']);
+			$this->load->view('daftar_pemesanan', $data);
 		}
-}
-
+	}
 
 ?>

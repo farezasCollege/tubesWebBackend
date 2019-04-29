@@ -7,7 +7,7 @@
 		
 		public function getPemesanan()
 		{
-			return $this->db->query("SELECT Nama, nama_jasa, harga, jam_pelayanan, tanggal_pelayanan FROM user JOIN pemesanan USING(Username) JOIN jenis_jasa USING(id_layanan)");
+			return $this->db->query("SELECT u.Nama, jj.nama_jasa, jj.harga, pm.jam_pelayanan, pm.tanggal_pelayanan, pm.status_bayar FROM user u, pemesanan pm , jenis_jasa jj where u.Username=pm.username and jj.id_layanan=pm.id_layanan");
 		}
 	
 	    // public function getPemesanan1()
