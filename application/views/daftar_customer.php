@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SISFO manager</title>
+	<title>daftar customer</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,13 +21,16 @@
 		<div class="row navigation-nav">
 			<ul>
 				<li class="nav-item active">
-					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index1')?>">Lihat customer</a>
+					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat data pembayaran</a>
+					<a class="nav-link" href="<?php echo base_url('index.php/jasaPemesananTabel');?>">Lihat data pembayaran</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Daftarkan pegawai</a>
 				</li>
 			</ul>
 		</div>
@@ -40,7 +43,6 @@
                         <th class="text-center" scope="col">DATE OF BIRTH</th>
                         <th class="text-center" scope="col">EMAIL</th>
                         <th class="text-center" scope="col">USERNAME</th>
-                        <th class="text-center" scope="col">ROLE</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +51,6 @@
                         <td class="text-center"><?= $cus['Date']; ?></td>
                         <td class="text-center"><?= $cus['Email']; ?></td>
                         <td class="text-center"><?= $cus['Username']; ?></td>
-						<td class="text-center"><?= $cus['Role']; ?></td>
                         <td class="text-center">
                         </td>
                     </tr>

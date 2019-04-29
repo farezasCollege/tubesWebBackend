@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>daftar_pegawai</title>
+	<title>daftar pegawai</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -27,7 +27,10 @@
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>" style="color:white">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat data pembayaran</a>
+					<a class="nav-link" href="<?php echo base_url('index.php/jasaPemesananTabel');?>">Lihat data pembayaran</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Daftarkan pegawai</a>
 				</li>
 			</ul>
 		</div>
@@ -52,7 +55,7 @@
                         <td class="text-center"><?= $Peg['Username']; ?></td>
 						<td class="text-center"><?= $Peg['Role']; ?></td>
                         <td class="text-center">
-						<a href="<?= base_url(); ?>Web/hapus/<?= $Peg['Username'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+						<a href="<?php echo anchor(base_url('index.php/Web/hapus/'.$Peg['Username'])); ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');">hapus</a>
                         </td>
                     </tr>
                     <?php endforeach ?>

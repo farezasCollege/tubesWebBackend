@@ -78,16 +78,16 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join Us"
-                                  href="<?php echo base_url('index.php/Web/Register'); ?>"/>
+                                  href="<?php echo base_url('index.php/Web/Register'); ?>"/> //nanti href nya diganti
                             </div>
                         </form>
                     </div>
-                    <div class="signup-image">
+                   <!--  <div class="signup-image">
                         <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
                         <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
     
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
