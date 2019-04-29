@@ -160,20 +160,13 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="time" name="jam">
-                            <!-- <div class="select-list">
-                                <select name="time" id="time" required>
-                                    <option value="">Time</option>
-                                    <option value="6pm">6:00 PM</option>
-                                    <option value="7pm">7:00 PM</option>
-                                </select>
-                            </div> -->
+                            <input type="time" name="jam">s
                             <br>
                             <div class="select-list">
                                 <select name="service" id="service" required>
                                     <option value="Nail Art">Nail Art</option>
                                     <option value="Creambath">Creambath</option>
-                                    <option value="Smooting">Smooting</option>
+                                    <option value="Smoothing">Smooting</option>
                                     <option value="Spa">Spa</option>
                                     <option value="Hair Cut">Hair Cut</option>
                                 </select>

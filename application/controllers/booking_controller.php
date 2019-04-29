@@ -42,11 +42,9 @@ class booking_controller extends CI_Controller
 	}
 
 	function submit_pesan($arr_data){
-		// $kode=$arr_data['kode_booking'];
-
-
-		//$this->book->Getbooking($arr_data);
-		//$this->kirim($arr_data);
+		$kode=$arr_data['kode_booking'];
+		$this->book->Getbooking($arr_data);
+		$this->kirim($arr_data);
 
 		header("Location:".base_url('/index.php/Web/thankyou/'));
 	}

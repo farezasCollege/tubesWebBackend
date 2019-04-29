@@ -52,13 +52,13 @@
                 </thead>
                 <tbody>
                     <tr><?php foreach ($Pegawai as $Peg) : ?>
-                        <td class="text-center"><?= $Peg['Nama']; ?></td>
-                        <td class="text-center"><?= $Peg['Date']; ?></td>
-                        <td class="text-center"><?= $Peg['Email']; ?></td>
-                        <td class="text-center"><?= $Peg['Username']; ?></td>
-						<td class="text-center"><?= $Peg['Role']; ?></td>
+                        <td class="text-center"><?= $Peg->Nama; ?></td>
+                        <td class="text-center"><?= $Peg->Date; ?></td>
+                        <td class="text-center"><?= $Peg->Email; ?></td>
+                        <td class="text-center"><?= $Peg->Username; ?></td>
+						<td class="text-center"><?= $Peg->Role; ?></td>
                         <td class="text-center">
-						<a href="<?php echo anchor(base_url('index.php/Web/hapus/'.$Peg['Username'])); ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');">hapus</a>
+						 <?php echo anchor(base_url('index.php/Web/hapus/'.$Peg->Username),'Delete','onclick="javascript: return confirm(\'Are You Sure ?\')"'); ?>
                         </td>
                     </tr>
                     <?php endforeach ?>
