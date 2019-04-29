@@ -55,21 +55,12 @@ class Salon extends CI_Model {
 
 	public function GetPegawai()
 	{
-		$data = [
-			"Nama" => $this->input->post('nama', true),
-			"Date" => $this->input->post('date', true),
-			"Email" => $this->input->post('email', true),
-			"Username" => $this->input->post('username', true),
-			"Password" => $this->input->post('pass', true),
-			"Role" => $this->input->post('role', true) 
-		];
-
 		$arrData = array(
 			'Nama' => $_POST['nama'],
 			'Date' => $_POST['date'],
 			'Email' => $_POST['email'],
 			'Username' => $_POST['Username'],
-			'Password' => $_POST['pass'],
+			'Password' => md5($_POST['pass']),
 			'Role' => 'Pegawai'
 		);
 		$this->db->insert('user',$arrData);

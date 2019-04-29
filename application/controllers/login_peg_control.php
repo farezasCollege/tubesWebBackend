@@ -15,11 +15,11 @@
 
 		function login(){
 			$un=$_POST['uname'];
-			$pass=$_POST['pass'];
+			$pass=mb_substr(md5($_POST['pass']),0,10);
 
 			$dbase=$this->login_pg->get_pg($un,$pass);
 
-			if($un=="manager" && $pass=="manager123"){
+			if($un=="manager" && $pass=="0795151def"){ //master password for manager= manager123
 				redirect(base_url('/index.php/Web/view/')); //redirect ke dashboard manager
 
 			}else if($dbase->num_rows()>0){
