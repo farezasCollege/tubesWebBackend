@@ -38,7 +38,7 @@ class Salon extends CI_Model {
 			'Nama' => $this->input->post('nama', true),
 			'Date' => $this->input->post('date', true),
 			'Email' => $this->input->post('email', true),
-			'Password' => $this->input->post('pass', true),
+			'Password' => md5($this->input->post('pass', true)),
 			'Role' => 'customer'
 		);
 		//use query builder class to update data mahasiswa based on id
