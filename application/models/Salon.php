@@ -50,7 +50,7 @@ class Salon extends CI_Model {
 	{
 		$peg='Pegawai';
 		$query=$this->db->query("SELECT * FROM user WHERE Role='$peg'");
-		return $query->result_array();
+		return $query->result();
 	}
 
 	public function GetPegawai()
