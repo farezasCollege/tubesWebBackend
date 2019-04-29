@@ -29,7 +29,7 @@
   <h4 style="color: #00848E; font-family: 'Helvetica';">Kode booking berhasil dikonfirmasi</h4>
   <h4 style="color: #00848E; font-family: 'Helvetica';"></h4>
   <br>
-  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/booking_controller/'); ?>">klik untuk kembali ke halaman sebelumnya</a>
+  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/inputkodebooking_c/index'); ?>">klik untuk kembali ke halaman sebelumnya</a>
 </div>	
 
 

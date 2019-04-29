@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Thank You</title>
+	<title>Gagal Login</title>
 	<link rel="stylesheet" href="<?php echo base_url ('css/thankyou.css')?>">
 
 	<!-- Bootstrap CSS -->
@@ -29,7 +29,7 @@
   <h4 style="color: #00848E; font-family: 'Helvetica'; ">Email atau password yang anda masukkan salah</h4>
   <h4 style="color: #00848E; font-family: 'Helvetica';">Silahkan login ulang</h4>
   <br>
-  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/booking_controller/'); ?>">klik untuk kembali ke halaman sebelumnya</a>
+  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/login_peg_control/index'); ?>">klik untuk kembali ke halaman sebelumnya</a>
 </div>	
 
 

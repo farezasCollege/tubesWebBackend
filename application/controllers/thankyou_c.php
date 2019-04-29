@@ -3,9 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class thankyou_c extends CI_Controller {
 
-	public function gagal_login()
+	public function gagal_login_peg()
 	{
-		$this->load->view('gagal_login');
+		$this->load->view('gagal_login_peg');
+	}
+
+	public function gagal_login_cus()
+	{
+		$this->load->view('gagal_login_cus');
 	}
 
 	public function gagal_kobook()

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sukses</title>
+	<title>Gagal Login</title>
 	<link rel="stylesheet" href="<?php echo base_url ('css/thankyou.css')?>">
 
 	<!-- Bootstrap CSS -->
@@ -23,13 +23,13 @@
 <body>
 	<div class="bg-image"></div>
 <div class="bg-text">
-	<h1 style="font-size: 100px; color: #00848E;"><span class="glyphicon glyphicon-ok"></span></h1>
-  <h1 style="font-size:100px; font-family: 'Helvetica'; color: #00848E;">Sukses</h1>
+	<h1 style="font-size: 100px; color: #00848E;"><span class="glyphicon glyphicon-remove"></span></h1>
+  <h1 style="font-size:100px; font-family: 'Helvetica'; color: #00848E;"> Maaf </h1>
   <br>
-  <h4 style="color: #00848E; font-family: 'Helvetica';">Pegawai baru berhasil ditambahkan</h4>
-  <h4 style="color: #00848E; font-family: 'Helvetica';"></h4>
+  <h4 style="color: #00848E; font-family: 'Helvetica'; ">Email atau password yang anda masukkan salah</h4>
+  <h4 style="color: #00848E; font-family: 'Helvetica';">Silahkan login ulang</h4>
   <br>
-  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/Web/RegisterPeg'); ?>">klik untuk kembali ke halaman sebelumnya</a>
+  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url(''); ?>">klik untuk kembali ke halaman sebelumnya</a>
 </div>	
 
 
