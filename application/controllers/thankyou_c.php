@@ -28,4 +28,11 @@ class thankyou_c extends CI_Controller {
 		$this->load->view('sukses_signup_pegawai');
 	}
 
+	public function sudahkonf_kobook()
+	{
+		$this->load->view('sudahkonf_kobook');
+	}
+
+
+
 }
