@@ -41,16 +41,14 @@ class homepage extends CI_Controller
 				redirect(base_url('/index.php/homepage/homepage_cust/')); 
 			}else{
 				////tampilkan login gagal di view
-				echo "tidak bisa masuk lewat sini";
+				$this->load->view('gagal_login_cus');
 			}
 
 		}else{
-			//tampilkan login gagal di view
-			$this->session->set_flashdata("alert","gagal login");
-			redirect(base_url());
-			//echo "gagal";
+			$this->load->view('gagal_login_cus');
 		}
 	}
+
 
 	function homepage_cust(){
 		$this->load->view('homepage_customer');

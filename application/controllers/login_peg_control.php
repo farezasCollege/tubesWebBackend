@@ -39,11 +39,11 @@
 					echo "masuk";
 				}else{
 					//tampilkan login gagal di view
-					echo "anda tidak bisa login disini";
+					$this->load->view('gagal_login_peg');
 				}
 			}else{
 				//tampilkan login gagal di view
-				echo "maaf username atau password salah";
+				$this->load->view('gagal_login_peg');
 			}
 		}
 
