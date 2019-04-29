@@ -102,3 +102,8 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+.logout:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

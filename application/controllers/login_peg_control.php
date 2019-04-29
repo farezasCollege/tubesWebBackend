@@ -34,7 +34,7 @@
 
 				$this->session->set_userdata($peg_session);
 
-				if($akun[0]['Role']=="pegawai"){
+				if($akun[0]['Role']=="Pegawai"){
 					redirect(base_url('/index.php/inputkodebooking_c/')); //redirect ke page pegawai
 					echo "masuk";
 				}else{

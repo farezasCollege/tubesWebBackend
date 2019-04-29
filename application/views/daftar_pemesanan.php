@@ -21,16 +21,19 @@
 		<div class="row navigation-nav">
 			<ul>
 				<li class="nav-item" >
-					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index')?>" style="color:blue">Lihat customer</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" style="color:white" href="#">Lihat data Pemesanan</a>
+					<a class="nav-link" style="color:white" href="#">Lihat data Pembayaran</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Daftarkan pegawai</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/login_peg_control')?>">Logout</a>
 				</li>
 			</ul>
 		</div>
