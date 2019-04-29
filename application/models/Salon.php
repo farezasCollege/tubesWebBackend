@@ -7,9 +7,9 @@ class Salon extends CI_Model {
 	public function GetAllCustomer()
 	{
 		//use query builder to get data table "mahasiswa"
-	  $cus='customer';
+	  	$cus='customer';
 		$query=$this->db->query("SELECT * FROM user WHERE Role='$cus'");
-		return $query->result_array();
+		return $query->result();
 		
 	}
 

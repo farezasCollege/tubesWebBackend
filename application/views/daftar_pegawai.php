@@ -30,7 +30,7 @@
 					<a class="nav-link" href="<?php echo base_url('index.php/jasaPemesananTabel');?>">Lihat data pembayaran</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Daftarkan pegawai</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/RegisterPeg')?>">Daftarkan pegawai</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url ('index.php/login_peg_control')?>">Logout</a>
@@ -38,33 +38,38 @@
 			</ul>
 		</div>
 	</nav>
+	<div class="container content mt-6 col-8">
+		<table class="table table-bordered" id="mytable">
+			<thead>
+				<tr>
+					<th class="text-center" scope="col">NAMA</th>
+					<th class="text-center" scope="col">DATE OF BIRTH</th>
+					<th class="text-center" scope="col">EMAIL</th>
+					<th class="text-center" scope="col">USERNAME</th>
+					<th class="text-center" scope="col">ROLE</th>
+					<th class="text-center" scope="col">AKSI</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><?php foreach ($Pegawai as $Peg) : ?>
+				<td class="text-center"><?= $Peg->Nama; ?></td>
+				<td class="text-center"><?= $Peg->Date; ?></td>
+				<td class="text-center"><?= $Peg->Email; ?></td>
+				<td class="text-center"><?= $Peg->Username; ?></td>
+				<td class="text-center"><?= $Peg->Role; ?></td>
+				<td class="text-center">
+					<?php echo anchor(base_url('index.php/Web/hapus/'.$Peg->Username),'Delete','onclick="javascript: return confirm(\'Are You Sure ?\')"'); ?>
+				</td>
+			</tr>
+			<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
 
-	<table class="container content table mt-6 col-8">
-                <thead>
-                    <tr>
-                        <th class="text-center" scope="col">NAMA</th>
-                        <th class="text-center" scope="col">DATE OF BIRTH</th>
-                        <th class="text-center" scope="col">EMAIL</th>
-                        <th class="text-center" scope="col">USERNAME</th>
-                        <th class="text-center" scope="col">ROLE</th>
-						<th class="text-center" scope="col">AKSI</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><?php foreach ($Pegawai as $Peg) : ?>
-                        <td class="text-center"><?= $Peg->Nama; ?></td>
-                        <td class="text-center"><?= $Peg->Date; ?></td>
-                        <td class="text-center"><?= $Peg->Email; ?></td>
-                        <td class="text-center"><?= $Peg->Username; ?></td>
-						<td class="text-center"><?= $Peg->Role; ?></td>
-                        <td class="text-center">
-						 <?php echo anchor(base_url('index.php/Web/hapus/'.$Peg->Username),'Delete','onclick="javascript: return confirm(\'Are You Sure ?\')"'); ?>
-                        </td>
-                    </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
-
-	
+<script type="text/javascript"> 
+	$(document).ready(function() { 
+		$("#mytable").dataTable(); 
+	}); 
+</script> 
 </body>
 </html>

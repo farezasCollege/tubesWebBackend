@@ -115,7 +115,7 @@ class Web extends CI_Controller {
 		if($this->form_validation->run() != false){
 			$this->Salon->GetPegawai();
 		}else{
-			$this->load->view('RegisterPeg',$data);
+			$this->load->view('RegisterPegawai',$data);
 		}
 	}
 
