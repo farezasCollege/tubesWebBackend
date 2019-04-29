@@ -26,7 +26,7 @@
 				$this->inputkodebooking_m->updateBayar($kodee);
 				$this->load->view('sukses_kobook');
 			}else if($query->num_rows()>0 && $cekStatus[0]['status_bayar']==1){
-				echo "sudah bayar";
+				$this->load->view('sudahkonf_kobook');
 			}else{
 				$this->load->view('gagal_kobook');
 			}
