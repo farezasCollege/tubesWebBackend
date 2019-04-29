@@ -28,6 +28,8 @@
   <br>
   <h4>Your submission will received and we will contact you soon by email</h4>
   <h4>Please check your email</h4>
+  <br>
+  <a href="<?php echo base_url('/index.php/booking_controller/'); ?>">klik untuk kembali ke halaman sebelumnya</a>
 </div>	
 
 

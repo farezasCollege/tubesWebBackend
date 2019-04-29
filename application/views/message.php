@@ -22,10 +22,10 @@
 	<div class="message" style="background-color: #63a4ff;	background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%); width: 70%;">
 		<h3>Kode Booking Pelayanan Salon</h3>
 		<p>Berikut adalah kode booking anda:</p>
-		<span><?php echo $kode_booking;  ?></span>
+		<span><?php echo $kode;  ?></span>
 		<h5 style="margin-top: 5%;" >Informasi Pemesanan: </h5>
-		<span>Tanggal pesan layanan: <?php echo $tanggal_pelayanan; ?></span><br>
-		<div style="display: block; padding-bottom: 5%;">Waktu pelayanan: <?php echo $jam_pelayanan; ?> </div>
+		<span>Tanggal pesan layanan: <?php echo $tgl; ?></span><br>
+		<div style="display: block; padding-bottom: 5%;">Waktu pelayanan: <?php echo $jam; ?> </div>
 	</div>
 </body>
 
