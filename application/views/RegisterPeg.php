@@ -1,4 +1,4 @@
-<!DOCTYPE html> controller nya bukan view, namanya controlle
+<!DOCTYPE html> 
 <html>
 <head>
 	<meta charset="utf-8">
@@ -48,19 +48,16 @@
 							<a href="<?php echo base_url('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
 						</li>
 					</ul>
-					
 				</nav>
-			</div>    
+			</div> 
+		</div>   
      
-     
-     
-     <section class="signup">
+     	<section class="signup">
             <div class="container">
                 <div class="signup-content"> 
                     <div class="signup-form" style="margin-top:60px">
                         <h2 class="form-title" align="center">Sign up</h2>
-
-                        <form action="" method="POST" class="register-form" id="register-form">
+						<form action="<?php echo base_url('/index.php/Web/RegisterPeg/')?>" method="POST" class="register-form" id="register-form">                       
                         <div class="form-group">
                                 <input type="text" name="nama" id="name" placeholder="Full name" required/>
                             </div>
@@ -78,16 +75,18 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join Us"
-                                  href="<?php echo base_url('index.php/Web/Register'); ?>"/> //nanti href nya diganti
+                                  href="<?php echo base_url();?>"/>
                             </div>
                         </form>
                     </div>
-                   <!--  <div class="signup-image">
-                        <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
-                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
-    
+                    <div class="signup-image">
 
-                    </div> -->
+                        <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
+                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Sudah Punya Akun? Klik disini</a>
+
+                    </div>
                 </div>
             </div>
         </section>
+    </section>
+</body>
