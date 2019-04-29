@@ -16,8 +16,7 @@ class booking_controller extends CI_Controller
 		$this->load->model('book');
 		$jasa=$_POST['service'];
 		$id=$this->db->query("select id_layanan from jenis_jasa where nama_jasa='$jasa'")->result_array();
-		
-		$mail=$_POST['email'];
+
 		$kode_booking = "psn-".rand(0,99);
 		$kobook = $this->book->cekduplikat($kode_booking);
 
