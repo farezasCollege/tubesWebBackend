@@ -3,17 +3,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Salon extends CI_Model {
 
-	//COMPLETE ALL FUNCTION IN HERE
 	public function GetAllCustomer()
 	{
-		//use query builder to get data table "mahasiswa"
 	  $cus='customer';
 		$query=$this->db->query("SELECT * FROM user WHERE Role='$cus'");
 		return $query->result_array();
 		
 	}
 
-	public function GetCustomer(){
+	public function GetCustomer()
+	{
+		$data = [
+			"Nama" => $this->input->post('nama', true),
+			"Date" => $this->input->post('date', true),
+			"Email" => $this->input->post('email', true),
+			"Username" => $this->input->post('username', true),
+			"Password" => $this->input->post('pass', true),
+			"Role" => $this->input->post('role', true) 
+		];
 		$arrData = array(
 			'Nama' => $_POST['nama'],
 			'Date' => $_POST['date'],
@@ -41,7 +48,7 @@ class Salon extends CI_Model {
 			'Password' => $this->input->post('pass', true),
 			'Role' => 'customer'
 		);
-		//use query builder class to update data mahasiswa based on id
+
 		$this->db->where('Username',$Username);
 		$this->db->update('user',$data);
 	}
@@ -75,18 +82,13 @@ class Salon extends CI_Model {
 		$this->db->insert('user',$arrData);
 	}
 
-
-
 public function cariDatabooking()
 {
 	$kode = $this->input->post('kode', true);
 	$this->db->from('pemesanan');
   $query=$this->db->get();
   return $query->result_array();
-
-	//return data mahasiswa that has been searched
 }
-
 
 	public function hapusDataPegawai($Username)
 	{

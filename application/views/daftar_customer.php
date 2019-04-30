@@ -60,3 +60,10 @@
 	
 </body>
 </html>
+
+
+			<tr><?php foreach ($customer as $cus) : ?>
+			<td class="text-center"><?=$cus['Nama']; ?></td>
+			<td class="text-center"><?=$cus['Date']; ?></td>
+			<tr>
+				<?php endforeach?>

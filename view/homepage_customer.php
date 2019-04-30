@@ -40,7 +40,7 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" ><?php echo session_data ?></a>
 						<a class="dropdown-item" href="<?php echo base_url(); ?>">Edit profile</a>
-                        <a class="dropdown-item" href="<?=base_url();?>Web/hapus/<?=$Customer['Username']?>"onclick="return confirm('Apakah anda yakin menghapus data ini?');"?>Delete account</a>
+                        <a class="dropdown-item" href="<?=base_url();?>Web/hapunclick="return confirm('Apakah anda yakin menghapus data ini?');"?>Delete account</a>
 						<a class="dropdown-item" href="<?php base_url(); ?>">Logout</a>
 					</div>
 				</li>

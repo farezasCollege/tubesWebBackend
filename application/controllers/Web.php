@@ -45,7 +45,7 @@ class Web extends CI_Controller {
 		}else{
 			$this->load->view('Register',$data);
 			$this->load->view('header');
-			$this->load->view('footer');
+			
 		}
 
 
@@ -140,6 +140,7 @@ class Web extends CI_Controller {
 			$this->Salon->GetPegawai();
 		}else{
 			$this->load->view('RegisterPeg',$data);
+			$this->load->view('header');
 		}
 	}
 
