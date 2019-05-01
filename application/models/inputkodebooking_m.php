@@ -3,7 +3,13 @@
 	{
 		function cek_kode($a)
 		{
-			return $this->db->query("select Nama, nama_jasa, harga, jam_pelayanan, tanggal_pelayanan from user join pemesanan using(Username) join jenis_jasa using(id_layanan) where kode_booking = '$a'");
+			return $this->db->query("select status_bayar from pemesanan where kode_booking='$a'");
+		}
+
+		function updateBayar($kode){
+			$this->db->set('status_bayar',true,false);
+			$this->db->where('kode_booking',$kode);
+			$this->db->update('pemesanan');
 		}
 	}
 ?>

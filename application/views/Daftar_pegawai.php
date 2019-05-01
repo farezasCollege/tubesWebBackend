@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>daftar_pegawai</title>
+	<title>daftar pegawai</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,44 +21,55 @@
 		<div class="row navigation-nav">
 			<ul>
 				<li class="nav-item">
-					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>" style="color:white">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat data pembayaran</a>
+					<a class="nav-link" href="<?php echo base_url('index.php/jasaPemesananTabel');?>">Lihat data pembayaran</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/RegisterPeg')?>">Daftarkan pegawai</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/login_peg_control')?>">Logout</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
+	<div class="container content mt-6 col-8">
+		<table class="table table-bordered" id="mytable">
+			<thead>
+				<tr>
+					<th class="text-center" scope="col">NAMA</th>
+					<th class="text-center" scope="col">DATE OF BIRTH</th>
+					<th class="text-center" scope="col">EMAIL</th>
+					<th class="text-center" scope="col">USERNAME</th>
+					<th class="text-center" scope="col">ROLE</th>
+					<th class="text-center" scope="col">AKSI</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><?php foreach ($Pegawai as $Peg) : ?>
+				<td class="text-center"><?= $Peg->Nama; ?></td>
+				<td class="text-center"><?= $Peg->Date; ?></td>
+				<td class="text-center"><?= $Peg->Email; ?></td>
+				<td class="text-center"><?= $Peg->Username; ?></td>
+				<td class="text-center"><?= $Peg->Role; ?></td>
+				<td class="text-center">
+					<?php echo anchor(base_url('index.php/Web/hapus/'.$Peg->Username),'Delete','onclick="javascript: return confirm(\'Are You Sure ?\')"'); ?>
+				</td>
+			</tr>
+			<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
 
-	<table class="container content table mt-6 col-8">
-                <thead>
-                    <tr>
-                        <th class="text-center" scope="col">NAMA</th>
-                        <th class="text-center" scope="col">DATE OF BIRTH</th>
-                        <th class="text-center" scope="col">EMAIL</th>
-                        <th class="text-center" scope="col">USERNAME</th>
-                        <th class="text-center" scope="col">ROLE</th>
-						<th class="text-center" scope="col">AKSI</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><?php foreach ($Pegawai as $Peg) : ?>
-                        <td class="text-center"><?= $Peg['Nama']; ?></td>
-                        <td class="text-center"><?= $Peg['Date']; ?></td>
-                        <td class="text-center"><?= $Peg['Email']; ?></td>
-                        <td class="text-center"><?= $Peg['Username']; ?></td>
-						<td class="text-center"><?= $Peg['Role']; ?></td>
-                        <td class="text-center">
-						<a href="<?= base_url(); ?>Web/hapus/<?= $Peg['Username'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
-                        </td>
-                    </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
-
-	
+<script type="text/javascript"> 
+	$(document).ready(function() { 
+		$("#mytable").dataTable(); 
+	}); 
+</script> 
 </body>
 </html>

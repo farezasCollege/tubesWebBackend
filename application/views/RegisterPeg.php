@@ -1,4 +1,4 @@
-<!DOCTYPE html> controller nya bukan view, namanya controlle
+<!DOCTYPE html> 
 <html>
 <head>
 	<meta charset="utf-8">
@@ -48,46 +48,11 @@
 							<a href="<?php echo base_url('index.php/Web/booking')?>" class="nav-link" id="signup-butt">Booking</a>
 						</li>
 					</ul>
-					
 				</nav>
-			</div>    
-     
-     
-     
-     <section class="signup">
-            <div class="container">
-                <div class="signup-content"> 
-                    <div class="signup-form" style="margin-top:60px">
-                        <h2 class="form-title" align="center">Sign up</h2>
-
-                        <form action="" method="POST" class="register-form" id="register-form">
-                        <div class="form-group">
-                                <input type="text" name="nama" id="name" placeholder="Full name" required/>
-                            </div>
-                            <div class="form-group"> 
-                                <input type="Date" name="date" id="name" placeholder="Date Of Birth" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required/>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" placeholder="Your Email" required/>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="Username" id="name" placeholder="Username" required/>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="pass" id="pass" placeholder="Password" required/>
-                            </div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" style="background-color:#00848E"class="form-submit" value="Join Us"
-                                  href="<?php echo base_url('index.php/Web/Register'); ?>"/>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="signup-image">
-                        <figure><img src="<?php echo base_url('assets/img/salon.png'); ?>" alt="sing up image"></figure>
-                        <a href="<?php echo base_url(); ?>" class="signup-image-link">Already Have Account? Click Here</a>
-    
-
-                    </div>
-                </div>
-            </div>
+			</div> 
+		</div>   
+    </section>
+    <section class="signup">
+            
         </section>
+</body>

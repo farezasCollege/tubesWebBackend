@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Apr 2019 pada 11.55
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.0.28
+-- Generation Time: Apr 29, 2019 at 12:13 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_jasa`
+-- Table structure for table `jenis_jasa`
 --
 
 CREATE TABLE `jenis_jasa` (
@@ -35,22 +35,27 @@ CREATE TABLE `jenis_jasa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jenis_jasa`
+-- Dumping data for table `jenis_jasa`
 --
 
 INSERT INTO `jenis_jasa` (`id_layanan`, `nama_jasa`, `harga`) VALUES
-('ly-01', 'Nail Art', 50000),
-('ly-02', 'Creambath', 20000);
+('LY01', 'Nail Art', 200000),
+('LY02', 'Creambath', 100000),
+('LY03', 'Smoothing', 200000),
+('LY04', 'Spa', 300000),
+('LY05', 'Hair Extenion', 700000),
+('LY06', 'Hair Coloring', 800000),
+('LY07', 'Hair Cut', 150000);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pemesanan`
+-- Table structure for table `pemesanan`
 --
 
 CREATE TABLE `pemesanan` (
   `kode_booking` varchar(5) NOT NULL,
-  `username` varchar(25) NOT NULL,
+  `Username` varchar(25) NOT NULL,
   `id_layanan` varchar(8) NOT NULL,
   `status_bayar` tinyint(1) NOT NULL,
   `jam_pelayanan` time NOT NULL,
@@ -58,20 +63,16 @@ CREATE TABLE `pemesanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pemesanan`
+-- Dumping data for table `pemesanan`
 --
 
-INSERT INTO `pemesanan` (`kode_booking`, `username`, `id_layanan`, `status_bayar`, `jam_pelayanan`, `tanggal_pelayanan`) VALUES
-('psn-2', 'saaa', 'ly-02', 0, '01:00:00', '2019-04-01'),
-('psn-3', '1234', 'ly-01', 0, '01:00:00', '2019-04-01'),
-('psn-5', '1234', 'ly-01', 0, '15:00:00', '2019-04-23'),
-('psn-6', '1234', 'ly-01', 0, '01:00:00', '2019-04-09'),
-('psn-9', '1234', 'ly-01', 0, '01:00:00', '2019-04-16');
+INSERT INTO `pemesanan` (`kode_booking`, `Username`, `id_layanan`, `status_bayar`, `jam_pelayanan`, `tanggal_pelayanan`) VALUES
+('psn-8', 'ajitamayog', 'LY01', 0, '08:02:00', '2019-06-29');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -84,33 +85,38 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`Nama`, `Date`, `Email`, `Username`, `Password`, `Role`) VALUES
-('ejaa', '2019-04-04', 'haha@gmail', '1234', '81dc9bdb52', 'customer'),
-('eja', '2019-04-09', 'haha@gmail.com', 'dada12', 'e10adc3949', 'customer'),
+('Aji', '2019-04-04', 'aji@gmail.com', 'ajitamayog', 'yogaganten', 'customer'),
+('aqua', '2019-04-12', 'aqua@gmail.com', 'butuhaqua', 'aquasehat', 'Pegawai'),
+('eja', '04051999', 'eja@gmail.com', 'farezaa', 'fareza01', 'pegawai'),
+('mawar', '2019-04-24', 'mawar@harum.com', 'mawar', 'e93943ef53', 'customer'),
+('nabil', '2019-04-30', 'nabil@gmail.com', 'nabilfauza', 'nabilfauza', 'customer'),
+('Nurul', '2019-01-08', 'nurul@gmail.com', 'nunuzakiyy', '8d3813054d', 'customer'),
 ('nisa', '123', 'nisarahma128@yahoo.c', 'RTR', '13124141', 'Customer'),
-('captainAmerika', '123', 'nisarahma128@yahoo.c', 'saaa', '23534635', 'customer');
+('yoga', '2019-04-04', 'aji@gmail.com', 'yogaaji', 'yogacool', 'customer'),
+('Yoga Ajitama', '2019-04-09', 'yoga@gmail.com', 'yogaajitam', 'yogaajitam', 'Pegawai');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `jenis_jasa`
+-- Indexes for table `jenis_jasa`
 --
 ALTER TABLE `jenis_jasa`
   ADD PRIMARY KEY (`id_layanan`);
 
 --
--- Indeks untuk tabel `pemesanan`
+-- Indexes for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`kode_booking`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Username`);

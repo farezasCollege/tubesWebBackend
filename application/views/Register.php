@@ -48,13 +48,11 @@
 							<a href="<?php echo base_url('index.php/booking_controller/')?>" class="nav-link" id="signup-butt">Booking</a>
 						</li>
 					</ul>
-					
 				</nav>
-			</div>    
+			</div> 
+		</div> 
      
-     
-     
-     <section class="signup">
+     	<section class="signup">
             <div class="container">
                 <div class="signup-content"> 
                     <div class="signup-form" style="margin-top:60px">
@@ -90,3 +88,5 @@
                 </div>
             </div>
         </section>
+    </section>
+</body>

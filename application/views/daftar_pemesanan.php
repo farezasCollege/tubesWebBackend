@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SISFO manager</title>
+	<title>data pemesanan</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,51 +12,65 @@
 
 </head>
 <body>
-	<!-- <nav class="col-4">
+	<nav class="col-4">
 		<a class="logo" href="#">
-			<!-- navbar branding 
+			<!-- navbar branding -->
 			<img src="<?php echo base_url();?>assets/branding.png">
 		</a>
 
 		<div class="row navigation-nav">
 			<ul>
-				<li class="nav-item active">
-					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index1')?>">Lihat customer</a>
+				<li class="nav-item" >
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index')?>">Lihat customer</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
+				<li class="nav-item active">
+					<a class="nav-link" style="color:white" href="#">Lihat data Pembayaran</a>
+				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat data Pemesanan</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/RegisterPeg')?>">Daftarkan pegawai</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/login_peg_control')?>">Logout</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
-  -->
-	<table class="container content table mt-6 col-8">
-                <thead>
-                    <tr>
-                        <th class="text-center" scope="col">USERNAME</th>
-                        <th class="text-center" scope="col">SERVICE</th>
-                        <th class="text-center" scope="col">STATUS</th>
-                        <th class="text-center" scope="col">TIME</th>
-                        <th class="text-center" scope="col">DATE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><?php foreach ($pemesanan as $Pem) : ?>
-                        <td class="text-center"><?= $Pem['username']; ?></td>
-                        <td class="text-center"><?= $Pem['id_layanan']; ?></td>
-                        <td class="text-center"><?= $Pem['status_bayar']; ?></td>
-                        <td class="text-center"><?= $Pem['jam_pelayanan']; ?></td>
-						<td class="text-center"><?= $Pem['tanggal_pelayanan']; ?></td>
-                        <td class="text-center">
-                        </td>
-                    </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
+	<div class="container content mt-6 col-8">
+		<table class=" table table-bordered " id="mytable">
+			<thead>
+				<tr>
+					<!-- Nama, nama_jasa, harga, jam_pelayanan, tanggal_pelayanan -->
+					<th class="text-center" scope="col">NAME</th>
+					<th class="text-center" scope="col">SERVICE</th>
+					<th class="text-center" scope="col">TIME</th>
+					<th class="text-center" scope="col">DATE</th>
+					<th class="text-center" scope="col">STATUS BAYAR</th>
+					<th class="text-center" scope="col">PRICE</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><?php foreach ($pemesanan as $Pem) : ?>
+				<td class="text-center"><?= $Pem->Nama; ?></td>
+				<td class="text-center"><?= $Pem->nama_jasa; ?></td>
+				<td class="text-center"><?= $Pem->jam_pelayanan; ?></td>
+				<td class="text-center"><?= $Pem->tanggal_pelayanan; ?></td>
+				<td class="text-center"><?= $Pem->status_bayar; ?>
+			</td>
+			<td class="text-center"><?= $Pem->harga; ?></td>
+				</tr>
+			<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
 
-	
+<script type="text/javascript"> 
+	$(document).ready(function() { 
+		$("#mytable").dataTable(); 
+	}); 
+</script> 
+
 </body>
 </html>

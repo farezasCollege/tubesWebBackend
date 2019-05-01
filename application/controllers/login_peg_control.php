@@ -10,16 +10,17 @@
 		}
 
 		function index(){
+			$this->session->sess_destroy();
 			$this->load->view('login_pegawai');
 		}
 
 		function login(){
 			$un=$_POST['uname'];
-			$pass=$_POST['pass'];
+			$pass=mb_substr(md5($_POST['pass']),0,10);
 
 			$dbase=$this->login_pg->get_pg($un,$pass);
 
-			if($un=="manager" && $pass=="manager123"){
+			if($un=="manager" && $pass=="0795151def"){ //master password for manager= manager123
 				redirect(base_url('/index.php/Web/view/')); //redirect ke dashboard manager
 
 			}else if($dbase->num_rows()>0){
@@ -34,16 +35,16 @@
 
 				$this->session->set_userdata($peg_session);
 
-				if($akun[0]['Role']=="pegawai"){
+				if($akun[0]['Role']=="Pegawai"){
 					redirect(base_url('/index.php/inputkodebooking_c/')); //redirect ke page pegawai
 					echo "masuk";
 				}else{
 					//tampilkan login gagal di view
-					echo "anda tidak bisa login disini";
+					$this->load->view('gagal_login_peg');
 				}
 			}else{
 				//tampilkan login gagal di view
-				echo "maaf username atau password salah";
+				$this->load->view('gagal_login_peg');
 			}
 		}
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Thank You</title>
+	<title>konfirmasi</title>
 	<link rel="stylesheet" href="<?php echo base_url ('css/thankyou.css')?>">
 
 	<!-- Bootstrap CSS -->
@@ -24,12 +24,12 @@
 	<div class="bg-image"></div>
 <div class="bg-text">
 	<h1 style="font-size: 100px; color: #00848E;"><span class="glyphicon glyphicon-ok"></span></h1>
-  <h1 style="font-size:100px; font-family: 'Helvetica'; color: #00848E;"> Thank You !</h1>
+  <h1 style="font-size:70px; font-family: 'Helvetica'; color: #00848E;">Sudah dikonfirmasi</h1>
   <br>
-  <h4 style="color: #00848E; font-family: 'Helvetica'; ">Your submission will received and we will contact you soon by email</h4>
-  <h4 style="color: #00848E; font-family: 'Helvetica';">Please check your email</h4>
+  <h4 style="color: #00848E; font-family: 'Helvetica';">Kode booking sudah dikonfirmasi sebelumnya</h4>
+  <h4 style="color: #00848E; font-family: 'Helvetica';"></h4>
   <br>
-  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/booking_controller/'); ?>">klik untuk kembali ke halaman sebelumnya</a>
+  <a style="color: #00848E; font-family: 'Helvetica';" href="<?php echo base_url('/index.php/inputkodebooking_c/'); ?>">klik untuk kembali ke halaman sebelumnya</a>
 </div>	
 
 

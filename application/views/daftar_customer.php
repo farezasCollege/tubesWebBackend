@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SISFO manager</title>
+	<title>daftar customer</title>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/daftar_customer.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,43 +21,51 @@
 		<div class="row navigation-nav">
 			<ul>
 				<li class="nav-item active">
-					<a class="nav-link cust" href="<?php echo base_url ('index.php/Web/index1')?>">Lihat customer</a>
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index')?>" style="color: white;" >Lihat customer</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url ('index.php/Web/index2')?>">Lihat pegawai</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Lihat data pembayaran</a>
+					<a class="nav-link" href="<?php echo base_url('index.php/jasaPemesananTabel');?>">Lihat data pembayaran</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/Web/RegisterPeg')?>">Daftarkan pegawai</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/login_peg_control')?>">Logout</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
- 
-	<table class="container content table mt-6 col-8">
-                <thead>
-                    <tr>
-                        <th class="text-center" scope="col">NAMA</th>
-                        <th class="text-center" scope="col">DATE OF BIRTH</th>
-                        <th class="text-center" scope="col">EMAIL</th>
-                        <th class="text-center" scope="col">USERNAME</th>
-                        <th class="text-center" scope="col">ROLE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><?php foreach ($customer as $cus) : ?>
-                        <td class="text-center"><?= $cus['Nama']; ?></td>
-                        <td class="text-center"><?= $cus['Date']; ?></td>
-                        <td class="text-center"><?= $cus['Email']; ?></td>
-                        <td class="text-center"><?= $cus['Username']; ?></td>
-						<td class="text-center"><?= $cus['Role']; ?></td>
-                        <td class="text-center">
-                        </td>
-                    </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
+	<div class="container content mt-6 col-8">
+		<table class="table table-bordered" id="mytable">
+			<thead>
+				<tr>
+					<th class="text-center" scope="col">NAMA</th>
+					<th class="text-center" scope="col">DATE OF BIRTH</th>
+					<th class="text-center" scope="col">EMAIL</th>
+					<th class="text-center" scope="col">USERNAME</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><?php foreach ($customer as $cus) : ?>
+				<td class="text-center"><?= $cus->Nama; ?></td>
+				<td class="text-center"><?= $cus->Date; ?></td>
+				<td class="text-center"><?= $cus->Email; ?></td>
+				<td class="text-center"><?= $cus->Username; ?></td>
+			</tr>
+			<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
 
-	
+<script type="text/javascript"> 
+	$(document).ready(function() { 
+		$("#mytable").dataTable(); 
+	}); 
+</script> 
+
 </body>
 </html>
 

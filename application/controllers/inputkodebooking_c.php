@@ -18,14 +18,19 @@
 
 		function cekkode()
 		{
-			// print_r($_POST);
-			// echo $_POST['kode'];
 			$kodee = $_POST['kode'];
 			$query = $this->inputkodebooking_m->cek_kode($kodee);
-			print_r($query->result_array());
-			$this->load->view('inputkodebooking');
+			$cekStatus = $query->result_array();
 
-			//tinggal nampilin tabel ke view
+			if($query->num_rows()>0 && $cekStatus[0]['status_bayar']==0){
+				$this->inputkodebooking_m->updateBayar($kodee);
+				$this->load->view('sukses_kobook');
+			}else if($query->num_rows()>0 && $cekStatus[0]['status_bayar']==1){
+				$this->load->view('sudahkonf_kobook');
+			}else{
+				$this->load->view('gagal_kobook');
+			}
+
 		}
 
 	}

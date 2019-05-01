@@ -29,6 +29,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url ('index.php/jasaPemesananTabel/getDatabooking')?>">Lihat data pemesanan</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/')?>">Daftarkan pegawai</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url ('index.php/login_peg_control')?>">Logout</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
