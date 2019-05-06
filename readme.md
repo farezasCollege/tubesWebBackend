@@ -1,4 +1,4 @@
-Panduan penggunaan program:
+Panduan penggunaan program: <br/><br/>
 &nbsp;&nbsp;1) Untuk web final adalah web yang sudah di hosting di https://saloncitra123.000webhostapp.com/ <br/>
 &nbsp;&nbsp;2) Terdapat 2 link untuk mengakses interface: <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;2.1) Untuk mengakses interface customer menggunakan https://saloncitra123.000webhostapp.com/ <br/>
@@ -10,7 +10,3 @@ Panduan penggunaan program:
 
 *nB: HARAP MENGGUNAKAN ALAMAT EMAIL ASLI SAAT REGISTRASI CUSTOMER AGAR SISTEM BISA MENGIRIMKAN KODE BOOKING KE ALAMAT EMAIL AKUN CUSTOMER
 
-Cara pake: <br/>
-	&nbsp;&nbsp;&nbsp;&nbsp;1. Clone dulu <br/>
-	&nbsp;&nbsp;&nbsp;&nbsp;2. Bikin file buat model, controller sama view nya <br/>
-	&nbsp;&nbsp;&nbsp;&nbsp;3. Copy file2 itu ke folder model,controller,view di repositori ini <br/>
